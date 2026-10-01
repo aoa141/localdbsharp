@@ -1,0 +1,3213 @@
+{
+  "SourceHash": "FD649C50B30237BC",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "where and order by",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid",
+              "5000.00"
+            ],
+            [
+              "Gus",
+              "5000.00"
+            ],
+            [
+              "Dee",
+              "4200.00"
+            ],
+            [
+              "Ann",
+              "3000.00"
+            ],
+            [
+              "Bob",
+              "2500.50"
+            ],
+            [
+              "Fay",
+              "2500.50"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "order by nulls and multiple keys",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Eve",
+              null
+            ],
+            [
+              "Bob",
+              "10"
+            ],
+            [
+              "Ann",
+              "10"
+            ],
+            [
+              "Gus",
+              "20"
+            ],
+            [
+              "Dee",
+              "20"
+            ],
+            [
+              "Cid",
+              "20"
+            ],
+            [
+              "Fay",
+              "30"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Fay",
+              "30"
+            ],
+            [
+              "Cid",
+              "20"
+            ],
+            [
+              "Dee",
+              "20"
+            ],
+            [
+              "Gus",
+              "20"
+            ],
+            [
+              "Ann",
+              "10"
+            ],
+            [
+              "Bob",
+              "10"
+            ],
+            [
+              "Eve",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "order by ordinal alias and expression",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Yearly",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid",
+              "60000.00"
+            ],
+            [
+              "Gus",
+              "60000.00"
+            ],
+            [
+              "Dee",
+              "50400.00"
+            ],
+            [
+              "Ann",
+              "36000.00"
+            ],
+            [
+              "Bob",
+              "30006.00"
+            ],
+            [
+              "Fay",
+              "30006.00"
+            ],
+            [
+              "Eve",
+              "18000.00"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Yearly",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Eve",
+              "18000.00"
+            ],
+            [
+              "Bob",
+              "30006.00"
+            ],
+            [
+              "Fay",
+              "30006.00"
+            ],
+            [
+              "Ann",
+              "36000.00"
+            ],
+            [
+              "Dee",
+              "50400.00"
+            ],
+            [
+              "Cid",
+              "60000.00"
+            ],
+            [
+              "Gus",
+              "60000.00"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Gus"
+            ],
+            [
+              "Fay"
+            ],
+            [
+              "Eve"
+            ],
+            [
+              "Dee"
+            ],
+            [
+              "Cid"
+            ],
+            [
+              "Bob"
+            ],
+            [
+              "Ann"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid"
+            ],
+            [
+              "Ann"
+            ],
+            [
+              "Bob"
+            ],
+            [
+              "Fay"
+            ],
+            [
+              "Dee"
+            ],
+            [
+              "Eve"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "order by column not in select list",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Eve"
+            ],
+            [
+              "Bob"
+            ],
+            [
+              "Fay"
+            ],
+            [
+              "Ann"
+            ],
+            [
+              "Dee"
+            ],
+            [
+              "Cid"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "top variants",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann"
+            ],
+            [
+              "Bob"
+            ],
+            [
+              "Cid"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid",
+              "5000.00"
+            ],
+            [
+              "Gus",
+              "5000.00"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid",
+              "5000.00"
+            ],
+            [
+              "Gus",
+              "5000.00"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "2"
+            ],
+            [
+              "3"
+            ],
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": []
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "7"
+            ],
+            [
+              "6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "offset fetch",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "4"
+            ],
+            [
+              "5"
+            ],
+            [
+              "6"
+            ],
+            [
+              "7"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "4"
+            ],
+            [
+              "5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": []
+        }
+      ]
+    },
+    {
+      "Name": "distinct",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ],
+            [
+              "10"
+            ],
+            [
+              "20"
+            ],
+            [
+              "30"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "Hired",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            }
+          ],
+          "Rows": [
+            [
+              "1500.00",
+              "2022-02-02 00:00:00.0000000"
+            ],
+            [
+              "2500.50",
+              "2020-06-15 00:00:00.0000000"
+            ],
+            [
+              "3000.00",
+              "2019-03-01 00:00:00.0000000"
+            ],
+            [
+              "4200.00",
+              "2021-11-05 00:00:00.0000000"
+            ],
+            [
+              "5000.00",
+              "2018-01-20 00:00:00.0000000"
+            ],
+            [
+              "5000.00",
+              "2023-07-07 00:00:00.0000000"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "3",
+              "16200.50"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "aggregates without group by",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "cntDept",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "avgSal",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "minSal",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "maxSal",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "firstName",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "lastHired",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            }
+          ],
+          "Rows": [
+            [
+              "7",
+              "6",
+              "23701.00",
+              "3385.857142",
+              "1500.00",
+              "5000.00",
+              "Ann",
+              "2023-07-07 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "aggregates over empty set",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "mn",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "mx",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "aggregate types",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "sumInt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "avgInt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "sumMoney",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "avgMoney",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "sumBig",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "avgFloat",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "sumDec",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "avgDec",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "cb",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "sumTiny",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "avgSmall",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "27",
+              "3",
+              "2205.8400",
+              "275.7300",
+              "27",
+              "3.375",
+              "27.0",
+              "3.375000",
+              "8",
+              "27",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "statistical aggregates",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "sd",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "sdp",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "v",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "vp",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              "3.0676887530703447",
+              "2.8695600708122493",
+              "9.410714285714286",
+              "8.234375"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "group by",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "average",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "1",
+              "1500.00",
+              "1500.000000"
+            ],
+            [
+              "10",
+              "2",
+              "5500.50",
+              "2750.250000"
+            ],
+            [
+              "20",
+              "3",
+              "14200.00",
+              "4733.333333"
+            ],
+            [
+              "30",
+              "1",
+              "2500.50",
+              "2500.500000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "group by expression and having",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "yr",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2020",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "10"
+            ],
+            [
+              "20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "group by multiple columns",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "amt",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "2",
+              "300.0000",
+              "3"
+            ],
+            [
+              "East",
+              "1",
+              "20.0000",
+              "1"
+            ],
+            [
+              "East",
+              "3",
+              "999.9900",
+              "1"
+            ],
+            [
+              "North",
+              "1",
+              "100.0000",
+              "2"
+            ],
+            [
+              "North",
+              "2",
+              "75.2500",
+              "5"
+            ],
+            [
+              "North",
+              "6",
+              "50.0000",
+              "10"
+            ],
+            [
+              "South",
+              "1",
+              "250.5000",
+              "1"
+            ],
+            [
+              "South",
+              "6",
+              "410.1000",
+              "4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "group by with expression on aggregates",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "unit",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "spread",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "share",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "92.6250",
+              "230.5000",
+              "0.375000"
+            ],
+            [
+              "2",
+              "46.9062",
+              "224.7500",
+              "0.250000"
+            ],
+            [
+              "3",
+              "999.9900",
+              "0.0000",
+              "0.125000"
+            ],
+            [
+              "6",
+              "32.8642",
+              "360.1000",
+              "0.250000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "group by case insensitive strings",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "v",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "A",
+              "3"
+            ],
+            [
+              "B",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "having without group by",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": []
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "7"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inner join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Dept",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "Sales"
+            ],
+            [
+              "Bob",
+              "Sales"
+            ],
+            [
+              "Cid",
+              "Tech"
+            ],
+            [
+              "Dee",
+              "Tech"
+            ],
+            [
+              "Fay",
+              "Ops"
+            ],
+            [
+              "Gus",
+              "Tech"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "left join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Dept",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "Sales"
+            ],
+            [
+              "Bob",
+              "Sales"
+            ],
+            [
+              "Cid",
+              "Tech"
+            ],
+            [
+              "Dee",
+              "Tech"
+            ],
+            [
+              "Eve",
+              null
+            ],
+            [
+              "Fay",
+              "Ops"
+            ],
+            [
+              "Gus",
+              "Tech"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Empty",
+              "0"
+            ],
+            [
+              "Ops",
+              "1"
+            ],
+            [
+              "Sales",
+              "2"
+            ],
+            [
+              "Tech",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "right and full join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Dept",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "Sales"
+            ],
+            [
+              "Bob",
+              "Sales"
+            ],
+            [
+              "Cid",
+              "Tech"
+            ],
+            [
+              "Dee",
+              "Tech"
+            ],
+            [
+              "Gus",
+              "Tech"
+            ],
+            [
+              "Fay",
+              "Ops"
+            ],
+            [
+              null,
+              "Empty"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Dept",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "Sales"
+            ],
+            [
+              "Bob",
+              "Sales"
+            ],
+            [
+              "Cid",
+              "Tech"
+            ],
+            [
+              "Dee",
+              "Tech"
+            ],
+            [
+              "Eve",
+              null
+            ],
+            [
+              "Fay",
+              "Ops"
+            ],
+            [
+              "Gus",
+              "Tech"
+            ],
+            [
+              null,
+              "Empty"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cross join and comma join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "28"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Dept",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid",
+              "Tech"
+            ],
+            [
+              "Dee",
+              "Tech"
+            ],
+            [
+              "Gus",
+              "Tech"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "self join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Manager",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              null
+            ],
+            [
+              "Bob",
+              "Ann"
+            ],
+            [
+              "Cid",
+              "Ann"
+            ],
+            [
+              "Dee",
+              "Cid"
+            ],
+            [
+              "Eve",
+              "Cid"
+            ],
+            [
+              "Fay",
+              "Ann"
+            ],
+            [
+              "Gus",
+              "Cid"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "join with non equi and compound conditions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "SaleId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "2"
+            ],
+            [
+              "Bob",
+              "4"
+            ],
+            [
+              "Cid",
+              "5"
+            ],
+            [
+              "Fay",
+              "8"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "1"
+            ],
+            [
+              "4",
+              "3"
+            ],
+            [
+              "4",
+              "7"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "SaleId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "1"
+            ],
+            [
+              "Bob",
+              "3"
+            ],
+            [
+              "Cid",
+              null
+            ],
+            [
+              "Dee",
+              null
+            ],
+            [
+              "Eve",
+              null
+            ],
+            [
+              "Fay",
+              "6"
+            ],
+            [
+              "Gus",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "three table join with aggregation",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "sales",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "amount",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            }
+          ],
+          "Rows": [
+            [
+              "Tech",
+              "1",
+              "999.9900"
+            ],
+            [
+              "Sales",
+              "5",
+              "745.7500"
+            ],
+            [
+              "Ops",
+              "2",
+              "460.1000"
+            ],
+            [
+              "Empty",
+              "0",
+              "0.0000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "join on mismatched types",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "code",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "3",
+              "3"
+            ],
+            [
+              "7",
+              "07"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "join with null keys never matches",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "star expansion",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "EmpName",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "10",
+              "Sales",
+              "Ann"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "20",
+              "Tech"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "derived tables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "10",
+              "5500.50"
+            ],
+            [
+              "20",
+              "14200.00"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "s",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "7"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "values constructor",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              null
+            ],
+            [
+              "2",
+              "y"
+            ],
+            [
+              "1",
+              "x"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ],
+            [
+              "1.0"
+            ],
+            [
+              "2.5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "scalar subqueries",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "sales",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "best",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "3",
+              "250.5000"
+            ],
+            [
+              "Bob",
+              "2",
+              "300.0000"
+            ],
+            [
+              "Cid",
+              "1",
+              "999.9900"
+            ],
+            [
+              "Dee",
+              "0",
+              null
+            ],
+            [
+              "Eve",
+              "0",
+              null
+            ],
+            [
+              "Fay",
+              "2",
+              "410.1000"
+            ],
+            [
+              "Gus",
+              "0",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "missing",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "scalar subquery returning many rows",
+      "Error": 512,
+      "ErrorMessage": "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.",
+      "Results": []
+    },
+    {
+      "Name": "in and not in subqueries",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann"
+            ],
+            [
+              "Bob"
+            ],
+            [
+              "Cid"
+            ],
+            [
+              "Fay"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Dee"
+            ],
+            [
+              "Eve"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": []
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Empty"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "exists and not exists",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ops"
+            ],
+            [
+              "Sales"
+            ],
+            [
+              "Tech"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Empty"
+            ],
+            [
+              "Ops"
+            ],
+            [
+              "Sales"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "correlated subquery in where",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann"
+            ],
+            [
+              "Cid"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann"
+            ],
+            [
+              "Cid"
+            ],
+            [
+              "Eve"
+            ],
+            [
+              "Fay"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann"
+            ],
+            [
+              "Bob"
+            ],
+            [
+              "Cid"
+            ],
+            [
+              "Dee"
+            ],
+            [
+              "Eve"
+            ],
+            [
+              "Fay"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nested correlated subqueries",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ops"
+            ],
+            [
+              "Tech"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "subquery in select with outer aggregate",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "1",
+              "7"
+            ],
+            [
+              "10",
+              "2",
+              "7"
+            ],
+            [
+              "20",
+              "3",
+              "7"
+            ],
+            [
+              "30",
+              "1",
+              "7"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cross apply and outer apply",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "SaleId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Amount",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "2",
+              "250.5000"
+            ],
+            [
+              "Bob",
+              "4",
+              "300.0000"
+            ],
+            [
+              "Cid",
+              "5",
+              "999.9900"
+            ],
+            [
+              "Fay",
+              "8",
+              "410.1000"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "SaleId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "1"
+            ],
+            [
+              "Bob",
+              "3"
+            ],
+            [
+              "Cid",
+              "5"
+            ],
+            [
+              "Dee",
+              null
+            ],
+            [
+              "Eve",
+              null
+            ],
+            [
+              "Fay",
+              "6"
+            ],
+            [
+              "Gus",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Sales",
+              "20"
+            ],
+            [
+              "Sales",
+              "30"
+            ],
+            [
+              "Tech",
+              "40"
+            ],
+            [
+              "Tech",
+              "60"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "union intersect except",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ],
+            [
+              "10"
+            ],
+            [
+              "20"
+            ],
+            [
+              "30"
+            ],
+            [
+              "40"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ],
+            [
+              "10"
+            ],
+            [
+              "10"
+            ],
+            [
+              "10"
+            ],
+            [
+              "20"
+            ],
+            [
+              "20"
+            ],
+            [
+              "20"
+            ],
+            [
+              "20"
+            ],
+            [
+              "30"
+            ],
+            [
+              "30"
+            ],
+            [
+              "40"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "10"
+            ],
+            [
+              "20"
+            ],
+            [
+              "30"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "40"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "set operation precedence and types",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ],
+            [
+              "1.0"
+            ],
+            [
+              "2.5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "kind",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Sales",
+              "dept"
+            ],
+            [
+              "Ann",
+              "emp"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "union column count mismatch",
+      "Error": 205,
+      "ErrorMessage": "All queries combined using a UNION, INTERSECT or EXCEPT operator must have an equal number of expressions in their target lists.",
+      "Results": []
+    },
+    {
+      "Name": "simple cte",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid"
+            ],
+            [
+              "Dee"
+            ],
+            [
+              "Gus"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "multiple ctes and column lists",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "20",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cte referenced twice",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "other",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "2"
+            ],
+            [
+              "1",
+              "3"
+            ],
+            [
+              "1",
+              "6"
+            ],
+            [
+              "2",
+              "3"
+            ],
+            [
+              "2",
+              "6"
+            ],
+            [
+              "6",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "recursive cte numbers",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "55",
+              "10"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "recursive cte hierarchy",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "lvl",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "path",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "0",
+              "Ann"
+            ],
+            [
+              "2",
+              "1",
+              "Ann>Bob"
+            ],
+            [
+              "3",
+              "1",
+              "Ann>Cid"
+            ],
+            [
+              "4",
+              "2",
+              "Ann>Cid>Dee"
+            ],
+            [
+              "5",
+              "2",
+              "Ann>Cid>Eve"
+            ],
+            [
+              "7",
+              "2",
+              "Ann>Cid>Gus"
+            ],
+            [
+              "6",
+              "1",
+              "Ann>Fay"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "recursion limit",
+      "Error": 530,
+      "ErrorMessage": "The statement terminated. The maximum recursion 100 has been exhausted before statement completion.",
+      "Results": []
+    },
+    {
+      "Name": "recursion with maxrecursion option",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "200"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cte with dml",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "case in where group and order",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "band",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "high",
+              "3"
+            ],
+            [
+              "mid",
+              "3"
+            ],
+            [
+              "low",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "like and in filters on tables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann"
+            ],
+            [
+              "Bob"
+            ],
+            [
+              "Cid"
+            ],
+            [
+              "Dee"
+            ],
+            [
+              "Eve"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann"
+            ],
+            [
+              "Fay"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Bob"
+            ],
+            [
+              "Dee"
+            ],
+            [
+              "Fay"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "date filters and grouping",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "m",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "amt",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "2",
+              "350.5000"
+            ],
+            [
+              "2",
+              "2",
+              "375.2500"
+            ],
+            [
+              "3",
+              "3",
+              "1069.9900"
+            ],
+            [
+              "4",
+              "1",
+              "410.1000"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "SaleId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5"
+            ],
+            [
+              "6"
+            ],
+            [
+              "7"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "d",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "Amount",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-02-14 00:00:00.0000000",
+              "300.0000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "views",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Staff",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Payroll",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "10",
+              "Sales",
+              "2",
+              "5500.50"
+            ],
+            [
+              "20",
+              "Tech",
+              "3",
+              "14200.00"
+            ],
+            [
+              "30",
+              "Ops",
+              "1",
+              "2500.50"
+            ],
+            [
+              "40",
+              "Empty",
+              "0",
+              "0.00"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Empty"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "Ann"
+            ],
+            [
+              "2",
+              "Bob"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "select variable assignment",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "list",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid",
+              "7",
+              "Cid,Dee,Gus,"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "unchanged",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid",
+              "0"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,954 @@
+{
+  "SourceHash": "C5F325A58FDF1B91",
+  "Cases": [
+    {
+      "Name": "declare inside a loop",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "xs",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "kept",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tvRows",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "5,6,7,",
+              "3",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "table variables are atomic per statement",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "afterDupInsert",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "afterCheckInsert",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "afterRollback",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "raiserror under xact_abort keeps the transaction",
+      "Error": 50000,
+      "ErrorMessage": "outside try",
+      "Results": []
+    },
+    {
+      "Name": "raiserror outside try under xact_abort",
+      "Error": 50000,
+      "ErrorMessage": "outside try",
+      "Results": []
+    },
+    {
+      "Name": "conversion error aborts the batch and rolls back",
+      "Error": 245,
+      "ErrorMessage": "Conversion failed when converting the varchar value 'abc' to data type int.",
+      "Results": []
+    },
+    {
+      "Name": "conversion error left no transaction",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "doomed transaction under xact_abort",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "xs",
+              "ClrType": "Int16",
+              "SqlType": "smallint"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "scope_identity is scoped",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "si",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "ai",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "100"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "si",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "ai",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "nextBatch",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "procedure changing trancount",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "266"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "raiserror in a trigger does not undo the statement",
+      "Error": 50000,
+      "ErrorMessage": "trg",
+      "Results": []
+    },
+    {
+      "Name": "raiserror in a trigger kept the row",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "logged",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "work after rollback in a trigger persists",
+      "Error": 3609,
+      "ErrorMessage": "The transaction ended in the trigger. The batch has been aborted.",
+      "Results": []
+    },
+    {
+      "Name": "work after rollback in a trigger persisted",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "logged",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "runtime error in a trigger rolls back the transaction",
+      "Error": 8134,
+      "ErrorMessage": "Divide by zero error encountered.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "runtime error in a trigger left no transaction",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cascades fire child triggers",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "what",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "del",
+              "10"
+            ],
+            [
+              "del",
+              "11"
+            ],
+            [
+              "upd",
+              "20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "output into sees values before triggers run",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "v",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "v",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "10"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "instead of triggers do not chain on the same table",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "v",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "deleted",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "True"
+            ],
+            [
+              "2",
+              "1005",
+              "False"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "merge applies deletes before updates",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "k",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "output can reference joined tables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "old",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "src",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a",
+              "s1"
+            ],
+            [
+              "3",
+              "c",
+              "s3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "nv",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "s3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "val",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "s1"
+            ],
+            [
+              "5",
+              "e"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "views with renamed columns are updatable",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "k",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "val",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "zz"
+            ],
+            [
+              "2",
+              "9",
+              "b"
+            ],
+            [
+              "10",
+              null,
+              "INS"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "val",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "cte"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "on update cascade",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "gid",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "10",
+              "11"
+            ],
+            [
+              "11",
+              "11"
+            ],
+            [
+              "12",
+              "12"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "self referencing rows in one statement",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mgr",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              null
+            ],
+            [
+              "2",
+              "1"
+            ],
+            [
+              "3",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "self reference still checked",
+      "Error": 547,
+      "ErrorMessage": "The INSERT statement conflicted with the FOREIGN KEY SAME TABLE constraint \"FK__emp__mgr__75A278F5\". The conflict occurred in database \"LocalDbSharpConf_a2cf3228ad8e45aaa62027eaca338e5c\", table \"dbo.emp\", column 'id'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "foreign keys on temp tables are not enforced",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "drop column keeps keys intact",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "10"
+            ],
+            [
+              "1",
+              "20"
+            ],
+            [
+              "1",
+              "30"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "drop column kept the key",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK__dc__3BD01988E3D86BFC'. Cannot insert duplicate key in object 'dbo.dc'. The duplicate key value is (30).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "primary key on nullable column via alter",
+      "Error": 8111,
+      "ErrorMessage": "Cannot define PRIMARY KEY constraint on nullable column in table 'np'.\r\nCould not create constraint or index. See previous errors.",
+      "Results": []
+    },
+    {
+      "Name": "failed primary key left column nullable",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "alter column resets nullability",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "drop column used by check constraint",
+      "Error": 5074,
+      "ErrorMessage": "The object 'ck_b' is dependent on column 'b'.\r\nALTER TABLE DROP COLUMN b failed because one or more objects access this column.",
+      "Results": []
+    },
+    {
+      "Name": "drop column used by computed column",
+      "Error": 5074,
+      "ErrorMessage": "The column 'c' is dependent on column 'b'.\r\nALTER TABLE DROP COLUMN b failed because one or more objects access this column.",
+      "Results": []
+    },
+    {
+      "Name": "alter primary key column",
+      "Error": 5074,
+      "ErrorMessage": "The object 'PK__apk__3BD01990B8EA22D0' is dependent on column 'k'.\r\nALTER TABLE ALTER COLUMN k failed because one or more objects access this column.",
+      "Results": []
+    },
+    {
+      "Name": "drop referenced primary key",
+      "Error": 3725,
+      "ErrorMessage": "The constraint 'pk_rp' is being referenced by table 'rc', foreign key constraint 'FK__rc__pid__02084FDA'.\r\nCould not drop constraint. See previous errors.",
+      "Results": []
+    },
+    {
+      "Name": "procedure temp tables shadow the caller's",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "99"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "add column with values",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c1",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c2",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "8",
+              null
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

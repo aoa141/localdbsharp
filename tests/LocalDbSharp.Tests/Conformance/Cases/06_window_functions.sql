@@ -1,0 +1,69 @@
+CREATE TABLE S (Id INT PRIMARY KEY, Grp VARCHAR(5) NOT NULL, Val INT NULL, Amt DECIMAL(8,2) NOT NULL);
+INSERT INTO S VALUES (1, 'a', 10, 1.50), (2, 'a', 20, 2.50), (3, 'a', 20, 3.00), (4, 'b', 5, 10.00), (5, 'b', NULL, 20.00), (6, 'b', 15, 30.00), (7, 'c', 7, 0.25);
+
+--# row_number rank dense_rank
+SELECT Id, ROW_NUMBER() OVER (ORDER BY Val DESC, Id) AS rn, RANK() OVER (ORDER BY Val DESC) AS rk, DENSE_RANK() OVER (ORDER BY Val DESC) AS dr
+FROM S ORDER BY Id;
+
+--# partitioned ranking
+SELECT Id, Grp, ROW_NUMBER() OVER (PARTITION BY Grp ORDER BY Val, Id) AS rn, RANK() OVER (PARTITION BY Grp ORDER BY Val) AS rk FROM S ORDER BY Id;
+
+--# ntile
+SELECT Id, NTILE(3) OVER (ORDER BY Id) AS t3, NTILE(2) OVER (PARTITION BY Grp ORDER BY Id) AS t2, NTILE(10) OVER (ORDER BY Id) AS t10 FROM S ORDER BY Id;
+
+--# lag lead
+SELECT Id, LAG(Val) OVER (ORDER BY Id) AS prev, LEAD(Val) OVER (ORDER BY Id) AS nxt, LAG(Val, 2, -1) OVER (ORDER BY Id) AS prev2,
+       LEAD(Id, 1, 0) OVER (PARTITION BY Grp ORDER BY Id) AS nextInGrp FROM S ORDER BY Id;
+
+--# first_value last_value
+SELECT Id, FIRST_VALUE(Id) OVER (PARTITION BY Grp ORDER BY Id) AS fv, LAST_VALUE(Id) OVER (PARTITION BY Grp ORDER BY Id) AS lvDefault,
+       LAST_VALUE(Id) OVER (PARTITION BY Grp ORDER BY Id ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS lvFull FROM S ORDER BY Id;
+
+--# aggregate over whole partition
+SELECT Id, SUM(Amt) OVER () AS total, SUM(Amt) OVER (PARTITION BY Grp) AS grpTotal, COUNT(*) OVER (PARTITION BY Grp) AS grpCnt,
+       COUNT(Val) OVER () AS nonNull, AVG(Val) OVER (PARTITION BY Grp) AS grpAvg, MAX(Val) OVER (PARTITION BY Grp) AS grpMax FROM S ORDER BY Id;
+
+--# running totals with default range frame
+SELECT Id, SUM(Amt) OVER (ORDER BY Id) AS running, SUM(Val) OVER (ORDER BY Val) AS runByVal, COUNT(*) OVER (ORDER BY Val) AS cntByVal,
+       SUM(Amt) OVER (PARTITION BY Grp ORDER BY Id) AS grpRunning FROM S ORDER BY Id;
+
+--# explicit rows frames
+SELECT Id, SUM(Val) OVER (ORDER BY Id ROWS BETWEEN 1 PRECEDING AND CURRENT ROW) AS s2,
+       SUM(Val) OVER (ORDER BY Id ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING) AS s3,
+       AVG(Amt) OVER (ORDER BY Id ROWS 2 PRECEDING) AS avg3,
+       MIN(Val) OVER (ORDER BY Id ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS minRest,
+       SUM(Val) OVER (ORDER BY Id ROWS UNBOUNDED PRECEDING) AS running,
+       COUNT(*) OVER (ORDER BY Id ROWS BETWEEN 2 FOLLOWING AND 3 FOLLOWING) AS ahead FROM S ORDER BY Id;
+
+--# range frame with peers
+SELECT Id, Val, SUM(Val) OVER (ORDER BY Val RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS r1,
+       SUM(Val) OVER (ORDER BY Val RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS r2 FROM S ORDER BY Id;
+
+--# percent_rank cume_dist
+SELECT Id, PERCENT_RANK() OVER (ORDER BY Val) AS pr, CUME_DIST() OVER (ORDER BY Val) AS cd FROM S ORDER BY Id;
+
+--# window over grouped query
+SELECT Grp, SUM(Amt) AS total, RANK() OVER (ORDER BY SUM(Amt) DESC) AS rk, SUM(SUM(Amt)) OVER () AS grand,
+       SUM(Amt) * 100 / SUM(SUM(Amt)) OVER () AS pct FROM S GROUP BY Grp ORDER BY Grp;
+
+--# window function in order by and in expression
+SELECT Id FROM S ORDER BY ROW_NUMBER() OVER (ORDER BY Amt DESC);
+SELECT Id, Amt - AVG(Amt) OVER (PARTITION BY Grp) AS diff, CASE WHEN ROW_NUMBER() OVER (PARTITION BY Grp ORDER BY Id) = 1 THEN 'first' ELSE '' END AS tag FROM S ORDER BY Id;
+
+--# top n per group via cte
+WITH r AS (SELECT Id, Grp, Amt, ROW_NUMBER() OVER (PARTITION BY Grp ORDER BY Amt DESC) AS rn FROM S)
+SELECT Id, Grp, Amt FROM r WHERE rn = 1 ORDER BY Grp;
+
+--# dedupe via row_number
+WITH d AS (SELECT Id, Val, ROW_NUMBER() OVER (PARTITION BY Val ORDER BY Id) AS rn FROM S WHERE Val IS NOT NULL)
+SELECT Id, Val FROM d WHERE rn > 1 ORDER BY Id;
+
+--# window result types
+SELECT TOP 1 ROW_NUMBER() OVER (ORDER BY Id) AS rn, RANK() OVER (ORDER BY Id) AS rk, NTILE(2) OVER (ORDER BY Id) AS nt, SUM(Val) OVER () AS s,
+       AVG(Amt) OVER () AS a, COUNT(*) OVER () AS c, LAG(Amt) OVER (ORDER BY Id) AS l, MIN(Grp) OVER () AS m FROM S ORDER BY Id;
+
+--# window function not allowed in where
+SELECT Id FROM S WHERE ROW_NUMBER() OVER (ORDER BY Id) = 1;
+
+--# ranking requires order by
+SELECT ROW_NUMBER() OVER () AS rn FROM S;

@@ -1,0 +1,982 @@
+{
+  "SourceHash": "7B7EE933B48CB6A7",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "commit keeps changes",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "11",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rollback undoes insert update delete",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "q",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "1011"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "bolt",
+              "11"
+            ],
+            [
+              "2",
+              "nut",
+              "20"
+            ],
+            [
+              "3",
+              "gear",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rollback restores unique index state",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "bolt"
+            ],
+            [
+              "2",
+              "nut"
+            ],
+            [
+              "3",
+              "gear"
+            ],
+            [
+              "10",
+              "ten"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nested transactions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "savepoints",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "100"
+            ],
+            [
+              "2",
+              "20"
+            ],
+            [
+              "3",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rolling back to a savepoint releases it",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "11",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6401",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6401",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "named transactions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6401",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "11",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rollback in catch",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "xs",
+              "ClrType": "Int16",
+              "SqlType": "smallint"
+            }
+          ],
+          "Rows": [
+            [
+              "2627",
+              "0"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "11",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "commit without transaction",
+      "Error": 3902,
+      "ErrorMessage": "The COMMIT TRANSACTION request has no corresponding BEGIN TRANSACTION.",
+      "Results": []
+    },
+    {
+      "Name": "rollback without transaction",
+      "Error": 3903,
+      "ErrorMessage": "The ROLLBACK TRANSACTION request has no corresponding BEGIN TRANSACTION.",
+      "Results": []
+    },
+    {
+      "Name": "xact_abort rolls back on error",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK__Item__3214EC07CE57B3D4'. Cannot insert duplicate key in object 'dbo.Item'. The duplicate key value is (1).",
+      "Results": []
+    },
+    {
+      "Name": "transaction with ddl rollback",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "table variables survive rollback",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "inVar",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "inTable",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "output inserted",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "dbl",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "cog",
+              "14"
+            ],
+            [
+              "6",
+              "pin",
+              "18"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "output deleted",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Price",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "cog",
+              "7",
+              "3.50"
+            ],
+            [
+              "6",
+              "pin",
+              "9",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "output on update",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "oldQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "newQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "delta",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "11",
+              "16",
+              "5"
+            ],
+            [
+              "2",
+              "20",
+              "25",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "output into table",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Action",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "ItemId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "OldQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "NewQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "UPD",
+              "1",
+              "16",
+              "11"
+            ],
+            [
+              "UPD",
+              "2",
+              "25",
+              "20"
+            ],
+            [
+              "INS",
+              "7",
+              null,
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "output into table variable",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "8",
+              "a"
+            ],
+            [
+              "9",
+              "b"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "merge insert update delete",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Price",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "bolt",
+              "50",
+              "0.25"
+            ],
+            [
+              "2",
+              "nut",
+              "20",
+              "0.10"
+            ],
+            [
+              "4",
+              "washer",
+              "70",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "merge with output and action",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "act",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "oldQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "newQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "srcName",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "UPDATE",
+              "1",
+              "50",
+              "51",
+              "bolt"
+            ],
+            [
+              "INSERT",
+              "3",
+              null,
+              "5",
+              "gear"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Price",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "BOLT",
+              "51",
+              "0.25"
+            ],
+            [
+              "2",
+              "nut",
+              "20",
+              "0.10"
+            ],
+            [
+              "3",
+              "gear",
+              "5",
+              "9.99"
+            ],
+            [
+              "4",
+              "washer",
+              "70",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "merge duplicate source rows",
+      "Error": 8672,
+      "ErrorMessage": "The MERGE statement attempted to UPDATE or DELETE the same row more than once. This happens when a target row matches more than one source row. A MERGE statement cannot UPDATE/DELETE the same row of the target table multiple times. Refine the ON clause to ensure a target row matches at most one source row, or use the GROUP BY clause to group the source rows.",
+      "Results": []
+    },
+    {
+      "Name": "merge upsert with variables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "20",
+              "spring",
+              "8"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cte with update and delete",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Price",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "0.25"
+            ],
+            [
+              "2",
+              "0.10"
+            ],
+            [
+              "3",
+              "1.00"
+            ],
+            [
+              "4",
+              null
+            ],
+            [
+              "20",
+              "1.00"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "insert from cte",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "101"
+            ],
+            [
+              "102"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

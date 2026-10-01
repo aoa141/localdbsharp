@@ -1,0 +1,2556 @@
+{
+  "SourceHash": "2F976BC30F2CE1DF",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "sort order of mixed strings",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "v",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              ""
+            ],
+            [
+              " y"
+            ],
+            [
+              "#"
+            ],
+            [
+              "-z"
+            ],
+            [
+              "_x"
+            ],
+            [
+              "~"
+            ],
+            [
+              "1"
+            ],
+            [
+              "10"
+            ],
+            [
+              "9"
+            ],
+            [
+              "A"
+            ],
+            [
+              "a"
+            ],
+            [
+              "a b"
+            ],
+            [
+              "a-b"
+            ],
+            [
+              "ab"
+            ],
+            [
+              "B"
+            ],
+            [
+              "e"
+            ],
+            [
+              "E2"
+            ],
+            [
+              "Z"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sort with accents",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "v",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "d"
+            ],
+            [
+              "E"
+            ],
+            [
+              "e"
+            ],
+            [
+              "é"
+            ],
+            [
+              "ë"
+            ],
+            [
+              "f"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sort order of names in varchar and nvarchar",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "v",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "co-op"
+            ],
+            [
+              "coo"
+            ],
+            [
+              "coop"
+            ],
+            [
+              "de la Cruz"
+            ],
+            [
+              "Delacroix"
+            ],
+            [
+              "O'Brien"
+            ],
+            [
+              "Oakes"
+            ],
+            [
+              "Obrien"
+            ],
+            [
+              "Smith"
+            ],
+            [
+              "Smith Jones"
+            ],
+            [
+              "Smith-Jones"
+            ],
+            [
+              "Smithjones"
+            ],
+            [
+              "Zoe"
+            ],
+            [
+              "Zoë"
+            ],
+            [
+              "Zof"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "v",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "coo"
+            ],
+            [
+              "coop"
+            ],
+            [
+              "co-op"
+            ],
+            [
+              "de la Cruz"
+            ],
+            [
+              "Delacroix"
+            ],
+            [
+              "Oakes"
+            ],
+            [
+              "Obrien"
+            ],
+            [
+              "O'Brien"
+            ],
+            [
+              "Smith"
+            ],
+            [
+              "Smith Jones"
+            ],
+            [
+              "Smithjones"
+            ],
+            [
+              "Smith-Jones"
+            ],
+            [
+              "Zoe"
+            ],
+            [
+              "Zoë"
+            ],
+            [
+              "Zof"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "comparison operators follow the same order",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "0",
+              "1",
+              "1",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "min max of strings",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "mn",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "mx",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "APPLE",
+              "cherry",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "like and trailing spaces",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "0",
+              "1",
+              "0",
+              "3",
+              "1",
+              "1",
+              "0",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "char column semantics",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "l",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "isA",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a|",
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "a|",
+              "1",
+              "1"
+            ],
+            [
+              "3",
+              "b|",
+              "1",
+              "0"
+            ],
+            [
+              "4",
+              "b|",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "group by null and count variants",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Grp",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "nv",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "s",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mn",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mx",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "2",
+              "1",
+              "5",
+              "5",
+              "5",
+              "apple "
+            ],
+            [
+              "a",
+              "2",
+              "1",
+              "10",
+              "10",
+              "10",
+              "Banana"
+            ],
+            [
+              "b",
+              "2",
+              "2",
+              "60",
+              "30",
+              "30",
+              "cherry"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "aggregates ignoring nulls",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "s",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "ad",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "wrongAvg",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "75",
+              "18",
+              "4",
+              "6",
+              "18.750000",
+              "12"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "s",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "m",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              null,
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "distinct treats nulls as equal",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Grp",
+              "ClrType": "String",
+              "SqlType": "char"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ],
+            [
+              "a"
+            ],
+            [
+              "b"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "order by nulls first and desc",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ],
+            [
+              "6"
+            ],
+            [
+              "5"
+            ],
+            [
+              "1"
+            ],
+            [
+              "3"
+            ],
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "4"
+            ],
+            [
+              "3"
+            ],
+            [
+              "1"
+            ],
+            [
+              "5"
+            ],
+            [
+              "6"
+            ],
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5"
+            ],
+            [
+              "1"
+            ],
+            [
+              "3"
+            ],
+            [
+              "4"
+            ],
+            [
+              "2"
+            ],
+            [
+              "6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "alias and column name interplay in order by",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Val",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "10"
+            ],
+            [
+              "2",
+              null
+            ],
+            [
+              "3",
+              "30"
+            ],
+            [
+              "4",
+              "30"
+            ],
+            [
+              "5",
+              "5"
+            ],
+            [
+              "6",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Val",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "2"
+            ],
+            [
+              null,
+              "6"
+            ],
+            [
+              "5",
+              "5"
+            ],
+            [
+              "10",
+              "1"
+            ],
+            [
+              "30",
+              "3"
+            ],
+            [
+              "30",
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "-6"
+            ],
+            [
+              "-5"
+            ],
+            [
+              "-4"
+            ],
+            [
+              "-3"
+            ],
+            [
+              "-2"
+            ],
+            [
+              "-1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "-1"
+            ],
+            [
+              "-2"
+            ],
+            [
+              "-3"
+            ],
+            [
+              "-4"
+            ],
+            [
+              "-5"
+            ],
+            [
+              "-6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inner names shadow outer names in correlated subqueries",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "sameVal",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "maxInGrp",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "0",
+              "2"
+            ],
+            [
+              "3",
+              "2",
+              "4"
+            ],
+            [
+              "4",
+              "2",
+              "4"
+            ],
+            [
+              "5",
+              "1",
+              null
+            ],
+            [
+              "6",
+              "0",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "subquery in on clause and join condition with or",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "other",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "3",
+              "4"
+            ],
+            [
+              "4",
+              "4"
+            ],
+            [
+              "5",
+              "5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "other",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "3"
+            ],
+            [
+              "3",
+              "4"
+            ],
+            [
+              "4",
+              "5"
+            ],
+            [
+              "5",
+              "1"
+            ],
+            [
+              "5",
+              "6"
+            ],
+            [
+              "6",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "in with nulls on both sides",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": []
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "4"
+            ],
+            [
+              "5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ],
+            [
+              "3"
+            ],
+            [
+              "4"
+            ],
+            [
+              "5"
+            ],
+            [
+              "6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "intersect and except treat nulls as equal",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Grp",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "Val",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Val",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ],
+            [
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "union order by and names",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "k",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Txt",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "30",
+              "b"
+            ],
+            [
+              "2",
+              "Banana"
+            ],
+            [
+              "1",
+              "apple"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Txt",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "apple"
+            ],
+            [
+              "1",
+              "apple"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "top with ties and percent edge cases",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "2"
+            ],
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6"
+            ],
+            [
+              "5"
+            ],
+            [
+              "4"
+            ],
+            [
+              "3"
+            ],
+            [
+              "2"
+            ],
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "short circuit evaluation",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "r",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "y"
+            ],
+            [
+              "y"
+            ],
+            [
+              "n"
+            ],
+            [
+              "n"
+            ],
+            [
+              "y"
+            ],
+            [
+              "y"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "v",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "10"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "2",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "bigint and decimal limits",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "9223372036854775807",
+              "-9223372036854775808",
+              "2147483648",
+              "99999999999999999999",
+              "12345678901234567890.123456789"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "bigint overflow",
+      "Error": 8115,
+      "ErrorMessage": "Arithmetic overflow error converting expression to data type bigint.",
+      "Results": []
+    },
+    {
+      "Name": "decimal precision loss on large multiplications",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "123518517406851296.0177280000",
+              "0.3333333333",
+              "3.333333"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "integer division and modulo signs",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              "-3",
+              "3",
+              "1",
+              "-1",
+              "0",
+              "0",
+              "5",
+              "3.500000",
+              "3.500000",
+              "3.5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "functions inside aggregates and aggregates inside functions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "h",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "75",
+              "75",
+              "6",
+              "CHERRY",
+              "2",
+              "2",
+              "18.750000",
+              "75!"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "string concatenation with numbers and nulls",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "apple:10",
+              "apple:10",
+              "apple/10"
+            ],
+            [
+              null,
+              "Banana:",
+              "Banana/?"
+            ],
+            [
+              "cherry:30",
+              "cherry:30",
+              "cherry/30"
+            ],
+            [
+              null,
+              ":30",
+              "?/30"
+            ],
+            [
+              "apple :5",
+              "apple :5",
+              "apple /5"
+            ],
+            [
+              null,
+              "APPLE:",
+              "APPLE/?"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "updatable cte for dedupe delete",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Email",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "4",
+              "a@x"
+            ],
+            [
+              "5",
+              "b@x"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "updatable cte for update",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Email",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "4",
+              "a@x1"
+            ],
+            [
+              "5",
+              "b@x2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Added",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            }
+          ],
+          "Rows": [
+            [
+              "4",
+              "2024-01-04 00:00:00.0000000"
+            ],
+            [
+              "5",
+              "2000-01-01 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "updatable view",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Email",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "4",
+              "via view"
+            ],
+            [
+              "5",
+              "via view"
+            ],
+            [
+              "6",
+              "inserted via view"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "defaults checks and computed columns with functions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Raw",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Clamped",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Stamp",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Code",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "150",
+              "100",
+              "NEW",
+              "abc"
+            ],
+            [
+              "2",
+              "-5",
+              "0",
+              "NEW",
+              null
+            ],
+            [
+              "3",
+              "50",
+              "50",
+              "NEW",
+              "xyz"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "check constraint with function length",
+      "Error": 2628,
+      "ErrorMessage": "String or binary data would be truncated in table 'LocalDbSharpConf_9a575dd3280a458fb8d6093c3ce2e51b.dbo.Fn', column 'Code'. Truncated value: 'toolo'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "identity is consumed by failed inserts",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "lastId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "multiple anchors and recursive members",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "src",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a"
+            ],
+            [
+              "2",
+              "a"
+            ],
+            [
+              "3",
+              "a"
+            ],
+            [
+              "100",
+              "b"
+            ],
+            [
+              "101",
+              "b"
+            ],
+            [
+              "102",
+              "b"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "recursive cte with join to table and depth limit",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "depth",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "2"
+            ],
+            [
+              "3",
+              "3"
+            ],
+            [
+              "4",
+              "4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "merge with delete and output deleted",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "act",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "oldV",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "newV",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "DELETE",
+              "2",
+              "b",
+              null
+            ],
+            [
+              "UPDATE",
+              "3",
+              "c",
+              "kept"
+            ],
+            [
+              "INSERT",
+              "4",
+              null,
+              "D"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a"
+            ],
+            [
+              "3",
+              "kept"
+            ],
+            [
+              "4",
+              "D"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "delete and update with output and where on joined tables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a"
+            ],
+            [
+              "4",
+              "D"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "newV",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "oldV",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "KEPT",
+              "kept"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "temp table visibility across procedures",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "42"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "innerGone",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "variables in top offset and like",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ],
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "set and select assignment edge cases",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "2",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "lastAssigned",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mx",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "set from multi row subquery fails",
+      "Error": 512,
+      "ErrorMessage": "Subquery returned more than 1 value. This is not permitted when the subquery follows =, !=, <, <= , >, >= or when the subquery is used as an expression.",
+      "Results": []
+    },
+    {
+      "Name": "nested functions and string building",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "proper",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "rev",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "padded",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "p",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "masked",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Apple",
+              "elppa",
+              "0001",
+              "2",
+              "*pple"
+            ],
+            [
+              "Banana",
+              "ananaB",
+              "0002",
+              "0",
+              "*anana"
+            ],
+            [
+              "Cherry",
+              "yrrehc",
+              "0003",
+              "0",
+              "*herry"
+            ],
+            [
+              "Apple",
+              "elppa",
+              "0005",
+              "2",
+              "*pple "
+            ],
+            [
+              "Apple",
+              "ELPPA",
+              "0006",
+              "2",
+              "*PPLE"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "string concatenation is capped at 8000 unless a max type takes part",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "capped",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "notCapped",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "unicodeCapped",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mixedCapped",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "castMax",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "rep",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "repMax",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "concatFn",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "8000",
+              "10000",
+              "4000",
+              "4000",
+              "10000",
+              "8000",
+              "9000",
+              "8000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "date arithmetic edge cases",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "k",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "l",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-02-29 00:00:00.0000000",
+              "2024-02-29 00:00:00.0000000",
+              "2020-02-29 00:00:00.0000000",
+              "2",
+              "1",
+              "2023-12-31 00:00:00.0000000",
+              "1",
+              "2",
+              "53",
+              "1",
+              "2024-01-31 00:00:00.0000000",
+              "1"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

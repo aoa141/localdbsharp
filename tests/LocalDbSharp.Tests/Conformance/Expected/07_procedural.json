@@ -1,0 +1,1290 @@
+{
+  "SourceHash": "BAEB15D2F902F8C6",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "variables and set",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "s",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "dt",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "q",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6",
+              "10",
+              "xyz",
+              "1.24",
+              "2024-05-06 00:00:00.0000000",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "variable truncation and conversion",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "s",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "t",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "abc",
+              "42",
+              "ab  |",
+              "255"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "variable overflow",
+      "Error": 220,
+      "ErrorMessage": "Arithmetic overflow error for data type tinyint, value = 256.",
+      "Results": []
+    },
+    {
+      "Name": "undeclared variable",
+      "Error": 137,
+      "ErrorMessage": "Must declare the scalar variable \"@nope\".",
+      "Results": []
+    },
+    {
+      "Name": "uninitialised variable is null",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "y",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "z",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "-1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "if else",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "r",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "mid+zero"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "while break continue",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "s",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "11",
+              "25"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nested loops",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "out",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1 2 4 3 6 9 "
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "try catch basics",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": []
+        },
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "sev",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "st",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "msg",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "line",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "8134",
+              "16",
+              "1",
+              "Divide by zero error encountered.",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "try catch constraint error and continue",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Msg",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "caught 2627"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "outside",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nested try catch and rethrow",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": []
+        },
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "msg",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "245",
+              "Conversion failed when converting the varchar value 'abc' to data type int."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "throw custom error",
+      "Error": 51000,
+      "ErrorMessage": "Custom failure",
+      "Results": []
+    },
+    {
+      "Name": "throw caught",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "msg",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "st",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "sev",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "50123",
+              "Something bad",
+              "7",
+              "16"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "raiserror",
+      "Error": 50000,
+      "ErrorMessage": "Problem 42 with thing",
+      "Results": []
+    },
+    {
+      "Name": "raiserror caught with formatting",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "num",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "msg",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "sev",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "st",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "50000",
+              "Value abc is 80% done",
+              "15",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "raiserror low severity does not throw",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "after",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "error in batch continues after statement level error",
+      "Error": 8134,
+      "ErrorMessage": "Divide by zero error encountered.",
+      "Results": []
+    },
+    {
+      "Name": "@@error and @@rowcount",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "err",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "0"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2627"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "stored procedure with parameters",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "bal",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "125.50"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "procedure raising error returns status",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "msg",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "prc",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Amount must be positive",
+              "dbo.Deposit",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "procedure defaults and result sets",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Owner",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "ann"
+            ],
+            [
+              "2",
+              "bob"
+            ],
+            [
+              "3",
+              "cid"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Owner",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "bob"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Owner",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "ann"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "missing procedure parameter",
+      "Error": 201,
+      "ErrorMessage": "Procedure or function 'NeedsParam' expects parameter '@p', which was not supplied.",
+      "Results": []
+    },
+    {
+      "Name": "unknown procedure",
+      "Error": 2812,
+      "ErrorMessage": "Could not find stored procedure 'dbo.NoSuchProc'.",
+      "Results": []
+    },
+    {
+      "Name": "alter and drop procedure",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "doubled",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "14"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "create or alter",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "v",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "module options are accepted",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "y",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "z",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "8"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "insert exec",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Owner",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "ann"
+            ],
+            [
+              "2",
+              "bob"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nested procedures and recursion",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "f",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "lvl",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3628800",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "scalar functions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "25.00",
+              "20.00",
+              "0.00",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tax",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "12.55"
+            ],
+            [
+              "2",
+              "5.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "function with query and recursion",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "o",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "missing",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "fib",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "bob",
+              null,
+              "55"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "inline table valued function",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Owner",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "ann"
+            ],
+            [
+              "2",
+              "bob"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Owner",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "ann"
+            ],
+            [
+              "2",
+              "bob"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "multi statement table valued function",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "sq",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "9"
+            ],
+            [
+              "4",
+              "16"
+            ],
+            [
+              "5",
+              "25"
+            ],
+            [
+              "6",
+              "36"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "165"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "error inside function aborts the statement",
+      "Error": 8134,
+      "ErrorMessage": "Divide by zero error encountered.",
+      "Results": []
+    },
+    {
+      "Name": "dynamic sql",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "two",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Owner",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "bob"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sp_executesql with output",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "175.50"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "dynamic sql cannot see outer variables",
+      "Error": 137,
+      "ErrorMessage": "Must declare the scalar variable \"@v\".",
+      "Results": []
+    },
+    {
+      "Name": "cursor loop",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "acc",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "fs",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3:cid;2:bob;1:ann;",
+              "-1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "print and nocount do not produce result sets",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "only",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "return ends batch",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "begin end blocks and nested if",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "r",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "two"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "case insensitive variable and keyword names",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Result",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "goto style labels are not needed for while with complex conditions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "steps",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "25"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

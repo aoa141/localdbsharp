@@ -1,0 +1,1363 @@
+{
+  "SourceHash": "4A2E21B70465E602",
+  "Cases": [
+    {
+      "Name": "integer arithmetic",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "-3",
+              "42",
+              "3",
+              "-3",
+              "1",
+              "-1",
+              "2147483647"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "integer overflow",
+      "Error": 8115,
+      "ErrorMessage": "Arithmetic overflow error converting expression to data type int.",
+      "Results": []
+    },
+    {
+      "Name": "bigint literal arithmetic",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "3000000000",
+              "6000000000",
+              "6000000000",
+              "9223372036854775807"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "divide by zero",
+      "Error": 8134,
+      "ErrorMessage": "Divide by zero error encountered.",
+      "Results": []
+    },
+    {
+      "Name": "decimal arithmetic scale",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "3.75",
+              "3.375",
+              "2.500000",
+              "0.333333",
+              "0.666666",
+              "0.333333",
+              "9.50"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "decimal division typed",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "3.3333333333333",
+              "0.142857",
+              "33.333333",
+              "3.500000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "decimal multiplication typed",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "3.125",
+              "6.00",
+              "3.50"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "float arithmetic",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Single",
+              "SqlType": "real"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              "0.3333333333333333",
+              "1.5",
+              "300",
+              "2.5",
+              "0.5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "mixed int and string",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "20",
+              "7"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "string to int conversion failure",
+      "Error": 245,
+      "ErrorMessage": "Conversion failed when converting the varchar value 'abc' to data type int.",
+      "Results": []
+    },
+    {
+      "Name": "string concatenation",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "abcdef",
+              null,
+              "ünïx",
+              "x5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "unary and bitwise",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "3",
+              "-6",
+              "2",
+              "7",
+              "5",
+              "-2.5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "comparison and three valued logic",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "f",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "g",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "h",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "T",
+              "F",
+              "F",
+              "F",
+              "T",
+              "T",
+              "F",
+              "F"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "string comparison is case and trailing space insensitive",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "0",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "between in like",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "1",
+              "0",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "like patterns",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "k",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "0",
+              "1",
+              "0",
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "case expressions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "e",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "f",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "two",
+              null,
+              "1.0",
+              "2.5",
+              "short",
+              "not"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "case mixed types take highest precedence",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int16",
+              "SqlType": "smallint"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "coalesce isnull nullif iif choose",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "h",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "i",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "k",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "l",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "x",
+              "5",
+              "4",
+              "yes",
+              "b",
+              null,
+              "1.0",
+              "abc",
+              "abcdef"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nullif",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "y",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "z",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "1",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "money division rounding",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "0.6666",
+              "0.1428",
+              "3.3333",
+              "3.7500",
+              "3.3333333",
+              "15.00000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "null propagation",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              null,
+              null,
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "literal types",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d1",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "d2",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "s",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "n",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Byte[]",
+              "SqlType": "varbinary"
+            },
+            {
+              "Name": "z",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "big",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "half",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1.0",
+              "1.50",
+              "1",
+              "a",
+              "a",
+              "0x0A0B",
+              null,
+              "123456789012",
+              "0.5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "no column name",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "select without from using where",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "x",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": []
+        }
+      ]
+    },
+    {
+      "Name": "bit values",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            }
+          ],
+          "Rows": [
+            [
+              "True",
+              "False",
+              "True",
+              "True",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "operator precedence",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "14",
+              "20",
+              "5",
+              "2",
+              "3",
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "tinyint smallint arithmetic",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int16",
+              "SqlType": "smallint"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "250",
+              "200",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "tinyint overflow",
+      "Error": 8115,
+      "ErrorMessage": "Arithmetic overflow error converting expression to data type tinyint.",
+      "Results": []
+    },
+    {
+      "Name": "money arithmetic",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "money"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "10.5000",
+              "21.0000",
+              "3.3333",
+              "1.2346",
+              "6.5000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "modulo decimals and negatives",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1.5",
+              "-1",
+              "1",
+              "0.5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "unicode and escapes",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "it's",
+              "日本語",
+              "3",
+              "tab\tx",
+              ""
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

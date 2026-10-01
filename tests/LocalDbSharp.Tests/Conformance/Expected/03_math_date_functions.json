@@ -1,0 +1,1535 @@
+{
+  "SourceHash": "81DF4E6609BC1D12",
+  "Cases": [
+    {
+      "Name": "abs ceiling floor sign",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "k",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "l",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "2.5",
+              "3",
+              "-2",
+              "2",
+              "-3",
+              "-1",
+              "0.0",
+              "5",
+              "2",
+              "1.5",
+              "1.0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "round",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2.570",
+              "3.0",
+              "-3.0",
+              "1200.000",
+              "2.500",
+              "20",
+              "2.67",
+              "4.0",
+              "100",
+              "200"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "float rounding and negative zero",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "i",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "k",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              "1000",
+              "-2.3",
+              "3.1",
+              "0.1",
+              "0",
+              "-0",
+              "-0",
+              "-0",
+              "0",
+              "3",
+              "1234.57"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datalength of decimals depends on the value",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "5",
+              "9",
+              "13",
+              "5",
+              "5",
+              "8"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datetime2 with long styles",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "f",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "g",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "h",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Mar 10 2024 10:10:10.123AM",
+              "Mar 10 2024 10:10:10.1234567PM",
+              "10 Mar 2024 10:10:10.123",
+              "10:10:10.12",
+              "Mar 10 2024 10:10:10AM",
+              "Mar 10 2024 10:10AM",
+              "2024-03-10 10:10:10",
+              "10:10:10"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "power sqrt square exp log",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "k",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              "1024",
+              "8.0",
+              "1.4142135623730951",
+              "4",
+              "9",
+              "1",
+              "0",
+              "3",
+              "3",
+              "100",
+              "3.141592653589793"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sqrt of negative",
+      "Error": 3623,
+      "ErrorMessage": "An invalid floating point operation occurred.",
+      "Results": []
+    },
+    {
+      "Name": "power overflow",
+      "Error": 232,
+      "ErrorMessage": "Arithmetic overflow error for type int, value = 10000000000.000000.",
+      "Results": []
+    },
+    {
+      "Name": "trigonometry",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "1",
+              "0",
+              "0.7853981633974483",
+              "0.7853981633974483",
+              "180",
+              "3.141592653589793",
+              "1.5707963267948966",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "greatest least",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "1",
+              "3",
+              "c",
+              "1.5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "isnumeric",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "0",
+              "0",
+              "0",
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datepart family",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "y",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "m",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "q",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "doy",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "dw",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "wk",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "hh",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mi",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "ss",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "ms",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "isowk",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "yy",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "dd",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2024",
+              "3",
+              "15",
+              "3",
+              "61",
+              "6",
+              "11",
+              "13",
+              "45",
+              "30",
+              "123",
+              "1",
+              "2024",
+              "15"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datename",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "March",
+              "Friday",
+              "2024",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "dateadd",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "d",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "e",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "f",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "g",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "h",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "i",
+              "ClrType": "DateTime",
+              "SqlType": "datetime2"
+            },
+            {
+              "Name": "j",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-02-29 00:00:00.0000000",
+              "2024-02-29 00:00:00.0000000",
+              "2025-02-28 00:00:00.0000000",
+              "2024-01-02 01:00:00.0000000",
+              "2023-12-31 23:30:00.0000000",
+              "2024-01-15 00:00:00.0000000",
+              "2024-04-15 00:00:00.0000000",
+              "2024-01-02 00:00:00.0000000",
+              "2024-01-01 00:00:00.5000000",
+              "2025-01-01 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datediff",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "j",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "60",
+              "1",
+              "1",
+              "1",
+              "1",
+              "1",
+              "-60",
+              "1",
+              "86400",
+              "757382400000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "eomonth and fromparts",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "d",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "e",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "f",
+              "ClrType": "DateTime",
+              "SqlType": "datetime2"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-02-29 00:00:00.0000000",
+              "2023-02-28 00:00:00.0000000",
+              "2024-02-29 00:00:00.0000000",
+              "2024-03-15 00:00:00.0000000",
+              "2024-03-15 13:45:30.5000000",
+              "2024-03-15 13:45:30.5000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datefromparts invalid",
+      "Error": 289,
+      "ErrorMessage": "Cannot construct data type date, some of the arguments have values which are not valid.",
+      "Results": []
+    },
+    {
+      "Name": "isdate",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "0",
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datetrunc",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "datetime2"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "datetime2"
+            },
+            {
+              "Name": "d",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-03-01 00:00:00.0000000",
+              "2024-01-01 00:00:00.0000000",
+              "2024-03-15 13:00:00.0000000",
+              "2024-07-01 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "date casts and comparisons",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "datetime2"
+            },
+            {
+              "Name": "d",
+              "ClrType": "DateTime",
+              "SqlType": "smalldatetime"
+            },
+            {
+              "Name": "e",
+              "ClrType": "TimeSpan",
+              "SqlType": "time"
+            },
+            {
+              "Name": "f",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "g",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "h",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "j",
+              "ClrType": "DateTime",
+              "SqlType": "datetime2"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-03-15 00:00:00.0000000",
+              "2024-03-15 13:45:30.1270000",
+              "2024-03-15 13:45:30.1234567",
+              "2024-03-15 13:46:00.0000000",
+              "13:45:30.5000000",
+              "2024-03-15 00:00:00.0000000",
+              "2024-03-15 00:00:00.0000000",
+              "2024-03-15 13:45:30.0000000",
+              "1",
+              "2024-03-15 13:45:30.1230000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datetime rounding to 1/300 second",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "d",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "e",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-01-01 00:00:00.0000000",
+              "2024-01-01 00:00:00.0030000",
+              "2024-01-01 00:00:00.0070000",
+              "2024-01-01 00:00:00.0100000",
+              "2024-01-02 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "date to string styles",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "s101",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s103",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s112",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s120",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s121",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s126",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s108",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s0",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s109",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s106",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s107",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s1",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s23",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s114",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s105",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s110",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s111",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s113",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s104",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "s102",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "03/05/2024",
+              "05/03/2024",
+              "20240305",
+              "2024-03-05 14:07:09",
+              "2024-03-05 14:07:09.123",
+              "2024-03-05T14:07:09.123",
+              "14:07:09",
+              "Mar  5 2024  2:07PM",
+              "Mar  5 2024  2:07:09:123PM",
+              "05 Mar 2024",
+              "Mar 05, 2024",
+              "03/05/24",
+              "2024-03-05",
+              "14:07:09:123",
+              "05-03-2024",
+              "03-05-2024",
+              "2024/03/05",
+              "05 Mar 2024 14:07:09:123",
+              "05.03.2024",
+              "2024.03.05"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "default date to string",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "b",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "f",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "g",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Mar  5 2024  2:07PM",
+              "2024-03-05",
+              "2024-03-05 14:07:09.5000000",
+              "Dec 25 2024 12:00AM",
+              "14:07:09.0000000",
+              "Mar  5 2024  2:07PM",
+              "2024-03-05 14:07:09.50"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "string to date with style",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "d",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-03-15 00:00:00.0000000",
+              "2024-03-15 00:00:00.0000000",
+              "2024-03-15 10:00:00.0000000",
+              "2024-03-15 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "invalid date string",
+      "Error": 241,
+      "ErrorMessage": "Conversion failed when converting date and/or time from character string.",
+      "Results": []
+    },
+    {
+      "Name": "datetime arithmetic",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-01-02 00:00:00.0000000",
+              "2023-12-31 12:00:00.0000000",
+              "1900-01-10 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "datetimeoffset",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "DateTimeOffset",
+              "SqlType": "datetimeoffset"
+            },
+            {
+              "Name": "b",
+              "ClrType": "DateTimeOffset",
+              "SqlType": "datetimeoffset"
+            },
+            {
+              "Name": "c",
+              "ClrType": "DateTimeOffset",
+              "SqlType": "datetimeoffset"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-03-15 13:45:30.0000000 +02:00",
+              "2024-03-15 06:45:30.0000000 -05:00",
+              "2024-03-15 13:45:30.0000000 +01:00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "date function result types",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "d1",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "d2",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "d3",
+              "ClrType": "DateTime",
+              "SqlType": "datetime2"
+            },
+            {
+              "Name": "d4",
+              "ClrType": "DateTime",
+              "SqlType": "smalldatetime"
+            },
+            {
+              "Name": "d5",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "d6",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-01-02 00:00:00.0000000",
+              "2024-01-02 00:00:00.0000000",
+              "2024-01-02 00:00:00.0000000",
+              "2024-01-02 00:00:00.0000000",
+              "2024-01-31 00:00:00.0000000",
+              "2024-01-02 00:00:00.0000000"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

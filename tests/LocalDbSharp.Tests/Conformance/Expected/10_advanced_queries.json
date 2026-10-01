@@ -1,0 +1,1834 @@
+{
+  "SourceHash": "4F91DDE75431D41B",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "order totals with join and group",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "OrderId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "lines",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "102",
+              "Bolt",
+              "3",
+              "137.00"
+            ],
+            [
+              "100",
+              "Acme",
+              "2",
+              "104.90"
+            ],
+            [
+              "103",
+              "Cyan",
+              "1",
+              "99.00"
+            ],
+            [
+              "105",
+              "Echo",
+              "1",
+              "88.00"
+            ],
+            [
+              "101",
+              "Acme",
+              "1",
+              "49.00"
+            ],
+            [
+              "104",
+              "Cyan",
+              "2",
+              "20.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "customers without orders",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Dune"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Dune"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Dune"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "revenue per country with rollup style union",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Country",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "revenue",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "US",
+              "173.90"
+            ],
+            [
+              "DE",
+              "225.00"
+            ],
+            [
+              "ALL",
+              "398.90"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "top product per category",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Category",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Price",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Books",
+              "Manual",
+              "5.00"
+            ],
+            [
+              "Hardware",
+              "Gadget",
+              "24.50"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "products never ordered and ordered more than once",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": []
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "orders",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Gadget",
+              "3"
+            ],
+            [
+              "Cable",
+              "2"
+            ],
+            [
+              "Manual",
+              "2"
+            ],
+            [
+              "Widget",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "correlated aggregates in select list",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "orders",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "lastOrder",
+              "ClrType": "DateTime",
+              "SqlType": "datetime"
+            },
+            {
+              "Name": "spent",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Acme",
+              "2",
+              "2024-02-11 10:30:00.0000000",
+              "153.90"
+            ],
+            [
+              "Bolt",
+              "1",
+              "2024-02-12 11:00:00.0000000",
+              "137.00"
+            ],
+            [
+              "Cyan",
+              "2",
+              "2024-03-02 08:20:00.0000000",
+              "119.00"
+            ],
+            [
+              "Dune",
+              "0",
+              null,
+              "0.00"
+            ],
+            [
+              "Echo",
+              "1",
+              "2024-03-15 12:00:00.0000000",
+              "88.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "running total per customer by date",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "CustomerId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "OrderId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "running",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "100",
+              "104.90",
+              "104.90"
+            ],
+            [
+              "1",
+              "101",
+              "49.00",
+              "153.90"
+            ],
+            [
+              "2",
+              "102",
+              "137.00",
+              "137.00"
+            ],
+            [
+              "3",
+              "103",
+              "99.00",
+              "99.00"
+            ],
+            [
+              "3",
+              "104",
+              "20.00",
+              "119.00"
+            ],
+            [
+              "5",
+              "105",
+              "88.00",
+              "88.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "month over month with lag",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "mon",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "rev",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "prev",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "change",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "104.90",
+              null,
+              "104.90"
+            ],
+            [
+              "2",
+              "186.00",
+              "104.90",
+              "81.10"
+            ],
+            [
+              "3",
+              "207.00",
+              "186.00",
+              "21.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "paging",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "ProductId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "Gadget"
+            ],
+            [
+              "1",
+              "Widget"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "ProductId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "Gadget"
+            ],
+            [
+              "4",
+              "Legacy"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "conditional aggregation pivot",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Country",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "shipped",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "open",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "cancelled",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "DE",
+              "0",
+              "2",
+              "0",
+              "2"
+            ],
+            [
+              "FR",
+              "0",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "US",
+              "3",
+              "0",
+              "1",
+              "4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "group by null category",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Category",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "lo",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "hi",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "mean",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              null,
+              "1",
+              "99.00",
+              "99.00",
+              "99.000000"
+            ],
+            [
+              "Books",
+              "1",
+              "5.00",
+              "5.00",
+              "5.000000"
+            ],
+            [
+              "Hardware",
+              "3",
+              "3.25",
+              "24.50",
+              "12.580000"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "having with subquery",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "ProductId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "15"
+            ],
+            [
+              "2",
+              "7"
+            ],
+            [
+              "5",
+              "22"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "in list with expressions and strings",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Acme"
+            ],
+            [
+              "Cyan"
+            ],
+            [
+              "Dune"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "case in order by",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "Status",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Bolt",
+              "open"
+            ],
+            [
+              "Echo",
+              "open"
+            ],
+            [
+              "Acme",
+              "shipped"
+            ],
+            [
+              "Acme",
+              "shipped"
+            ],
+            [
+              "Cyan",
+              "shipped"
+            ],
+            [
+              "Cyan",
+              "cancelled"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "distinct with order by and expressions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Country",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "Tier",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "US",
+              "3"
+            ],
+            [
+              "DE",
+              "2"
+            ],
+            [
+              "US",
+              "2"
+            ],
+            [
+              "DE",
+              "1"
+            ],
+            [
+              "FR",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "initial",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "C"
+            ],
+            [
+              "G"
+            ],
+            [
+              "L"
+            ],
+            [
+              "M"
+            ],
+            [
+              "W"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Category",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Hardware"
+            ],
+            [
+              "Books"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "update with correlated subquery and join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "Tier",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "Acme",
+              "3"
+            ],
+            [
+              "Bolt",
+              "3"
+            ],
+            [
+              "Cyan",
+              "3"
+            ],
+            [
+              "Dune",
+              "1"
+            ],
+            [
+              "Echo",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "ProductId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Price",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "10.99"
+            ],
+            [
+              "2",
+              "24.50"
+            ],
+            [
+              "3",
+              "5.00"
+            ],
+            [
+              "4",
+              "99.00"
+            ],
+            [
+              "5",
+              "3.58"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "delete with exists and join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "orders",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "insert select with top order and identity",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "OrderId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "CustomerId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Status",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "106",
+              "3",
+              "new"
+            ],
+            [
+              "107",
+              "1",
+              "new"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "lastId",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "cur",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "107",
+              "107"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nested derived tables and aliases",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "c",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "DE",
+              "50"
+            ],
+            [
+              "US",
+              "60"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "alias visibility rules",
+      "Error": 207,
+      "ErrorMessage": "Invalid column name 'dbl'.",
+      "Results": []
+    },
+    {
+      "Name": "cte chains with aggregates and joins",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "rk",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "Acme",
+              "153.90",
+              "1"
+            ],
+            [
+              "Bolt",
+              "137.00",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cte inside subquery and derived table",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Acme"
+            ],
+            [
+              "Cyan"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "exists in case and select list",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "st",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Acme",
+              "none"
+            ],
+            [
+              "Bolt",
+              "has open"
+            ],
+            [
+              "Cyan",
+              "none"
+            ],
+            [
+              "Dune",
+              "none"
+            ],
+            [
+              "Echo",
+              "has open"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "full join reconciliation",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "k",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "left_v",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "right_v",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a",
+              null
+            ],
+            [
+              "2",
+              "b",
+              "B"
+            ],
+            [
+              "3",
+              "c",
+              "C"
+            ],
+            [
+              "4",
+              null,
+              "D"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "multiple joins to same table",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "OrderId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "product",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "customer",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "102",
+              "Widget",
+              "Bolt"
+            ],
+            [
+              "102",
+              "Cable",
+              "Bolt"
+            ],
+            [
+              "102",
+              "Gadget",
+              "Bolt"
+            ],
+            [
+              "105",
+              "Gadget",
+              "Echo"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "string aggregation per group",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Country",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "names",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "DE",
+              "Bolt, Echo"
+            ],
+            [
+              "FR",
+              "Dune"
+            ],
+            [
+              "US",
+              "Acme, Cyan"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "date bucketing",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "monthStart",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2024-01-01 00:00:00.0000000",
+              "1"
+            ],
+            [
+              "2024-02-01 00:00:00.0000000",
+              "2"
+            ],
+            [
+              "2024-03-01 00:00:00.0000000",
+              "2"
+            ],
+            [
+              "2024-04-01 00:00:00.0000000",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "dow",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Sunday",
+              "1"
+            ],
+            [
+              "Monday",
+              "3"
+            ],
+            [
+              "Wednesday",
+              "1"
+            ],
+            [
+              "Friday",
+              "1"
+            ],
+            [
+              "Saturday",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "catalog helpers valid",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "d",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "e",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "f",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "g",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              null,
+              null,
+              "Order",
+              "dbo",
+              "dbo"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "information_schema",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "TABLE_SCHEMA",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "TABLE_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "TABLE_TYPE",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "dbo",
+              "Customer",
+              "BASE TABLE"
+            ],
+            [
+              "dbo",
+              "Order",
+              "BASE TABLE"
+            ],
+            [
+              "dbo",
+              "OrderLine",
+              "BASE TABLE"
+            ],
+            [
+              "dbo",
+              "Product",
+              "BASE TABLE"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "COLUMN_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "ORDINAL_POSITION",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "IS_NULLABLE",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "DATA_TYPE",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "CHARACTER_MAXIMUM_LENGTH",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "NUMERIC_PRECISION",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            },
+            {
+              "Name": "NUMERIC_SCALE",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "ProductId",
+              "1",
+              "NO",
+              "int",
+              null,
+              "10",
+              "0"
+            ],
+            [
+              "Name",
+              "2",
+              "NO",
+              "varchar",
+              "40",
+              null,
+              null
+            ],
+            [
+              "Category",
+              "3",
+              "YES",
+              "varchar",
+              "20",
+              null,
+              null
+            ],
+            [
+              "Price",
+              "4",
+              "NO",
+              "decimal",
+              null,
+              "9",
+              "2"
+            ],
+            [
+              "Discontinued",
+              "5",
+              "NO",
+              "bit",
+              null,
+              null,
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sys catalog views",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "type",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "type_desc",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Customer",
+              "U ",
+              "USER_TABLE"
+            ],
+            [
+              "Order",
+              "U ",
+              "USER_TABLE"
+            ],
+            [
+              "OrderLine",
+              "U ",
+              "USER_TABLE"
+            ],
+            [
+              "Product",
+              "U ",
+              "USER_TABLE"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "tbl",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "col",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "column_id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "is_nullable",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "is_identity",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            }
+          ],
+          "Rows": [
+            [
+              "Customer",
+              "CustomerId",
+              "1",
+              "False",
+              "True"
+            ],
+            [
+              "Customer",
+              "Name",
+              "2",
+              "False",
+              "False"
+            ],
+            [
+              "Customer",
+              "Country",
+              "3",
+              "False",
+              "False"
+            ],
+            [
+              "Customer",
+              "Joined",
+              "4",
+              "False",
+              "False"
+            ],
+            [
+              "Customer",
+              "Tier",
+              "5",
+              "False",
+              "False"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Order"
+            ],
+            [
+              "OrderLine"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "dbo"
+            ],
+            [
+              "sys"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "if exists drop patterns",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "state",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "gone"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "comments and odd formatting",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "semicolons and empty statements",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "keywords as identifiers when bracketed",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "from",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "select",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "shipped",
+              "100"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "three part names",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

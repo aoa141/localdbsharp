@@ -1,0 +1,1851 @@
+{
+  "SourceHash": "59F7A0696E7925A6",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "rollup",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Product",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "gr",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            },
+            {
+              "Name": "gp",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "East",
+              "plum",
+              "4",
+              "0",
+              "0"
+            ],
+            [
+              "East",
+              null,
+              "4",
+              "0",
+              "1"
+            ],
+            [
+              "North",
+              "apple",
+              "22",
+              "0",
+              "0"
+            ],
+            [
+              "North",
+              "pear",
+              "5",
+              "0",
+              "0"
+            ],
+            [
+              "North",
+              null,
+              "27",
+              "0",
+              "1"
+            ],
+            [
+              "South",
+              "apple",
+              "7",
+              "0",
+              "0"
+            ],
+            [
+              "South",
+              "pear",
+              "9",
+              "0",
+              "0"
+            ],
+            [
+              "South",
+              "plum",
+              "2",
+              "0",
+              "0"
+            ],
+            [
+              "South",
+              null,
+              "18",
+              "0",
+              "1"
+            ],
+            [
+              null,
+              null,
+              "49",
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "with rollup syntax",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "amt",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "East",
+              "60.00"
+            ],
+            [
+              "North",
+              "270.00"
+            ],
+            [
+              "South",
+              "181.00"
+            ],
+            [
+              null,
+              "511.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "cube",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Yr",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "amt",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "gid",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "East",
+              "2023",
+              "60.00",
+              "0"
+            ],
+            [
+              "North",
+              "2023",
+              "140.00",
+              "0"
+            ],
+            [
+              "North",
+              "2024",
+              "130.00",
+              "0"
+            ],
+            [
+              "South",
+              "2023",
+              "70.00",
+              "0"
+            ],
+            [
+              "South",
+              "2024",
+              "111.00",
+              "0"
+            ],
+            [
+              "East",
+              null,
+              "60.00",
+              "1"
+            ],
+            [
+              "North",
+              null,
+              "270.00",
+              "1"
+            ],
+            [
+              "South",
+              null,
+              "181.00",
+              "1"
+            ],
+            [
+              null,
+              "2023",
+              "270.00",
+              "2"
+            ],
+            [
+              null,
+              "2024",
+              "241.00",
+              "2"
+            ],
+            [
+              null,
+              null,
+              "511.00",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "grouping sets",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Product",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Yr",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "East",
+              null,
+              "2023",
+              "1",
+              "4"
+            ],
+            [
+              "North",
+              null,
+              "2023",
+              "2",
+              "15"
+            ],
+            [
+              "North",
+              null,
+              "2024",
+              "1",
+              "12"
+            ],
+            [
+              "South",
+              null,
+              "2023",
+              "1",
+              "7"
+            ],
+            [
+              "South",
+              null,
+              "2024",
+              "2",
+              "11"
+            ],
+            [
+              null,
+              "apple",
+              null,
+              "3",
+              "29"
+            ],
+            [
+              null,
+              "pear",
+              null,
+              "2",
+              "14"
+            ],
+            [
+              null,
+              "plum",
+              null,
+              "2",
+              "6"
+            ],
+            [
+              null,
+              null,
+              null,
+              "7",
+              "49"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rollup with having and expressions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "amt",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "products",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "North",
+              "270.00",
+              "2"
+            ],
+            [
+              "South",
+              "181.00",
+              "3"
+            ],
+            [
+              "TOTAL",
+              "511.00",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "mixed plain column and rollup",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Yr",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2023",
+              "East",
+              "4"
+            ],
+            [
+              "2023",
+              "North",
+              "15"
+            ],
+            [
+              "2023",
+              "South",
+              "7"
+            ],
+            [
+              "2023",
+              null,
+              "26"
+            ],
+            [
+              "2024",
+              "North",
+              "12"
+            ],
+            [
+              "2024",
+              "South",
+              "11"
+            ],
+            [
+              "2024",
+              null,
+              "23"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rollup over expression",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "parity",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "23",
+              "0"
+            ],
+            [
+              "1",
+              "26",
+              "0"
+            ],
+            [
+              null,
+              "49",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rollup on empty input",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": []
+        }
+      ]
+    },
+    {
+      "Name": "pivot",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "2023",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "2024",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "East",
+              "60.00",
+              null
+            ],
+            [
+              "North",
+              "140.00",
+              "130.00"
+            ],
+            [
+              "South",
+              "70.00",
+              "111.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "pivot with count and strings",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Yr",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "apple",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "pear",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "plum",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2023",
+              "2",
+              "1",
+              "1"
+            ],
+            [
+              "2024",
+              "1",
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "pivot groups by all remaining columns",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Region",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Product",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "2023",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "2024",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "North",
+              "apple",
+              "10",
+              "12"
+            ],
+            [
+              "North",
+              "pear",
+              "5",
+              null
+            ],
+            [
+              "South",
+              "apple",
+              "7",
+              null
+            ],
+            [
+              "South",
+              "pear",
+              null,
+              "9"
+            ],
+            [
+              "South",
+              "plum",
+              null,
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "unpivot",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Measure",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "Val",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "Qty",
+              "10"
+            ],
+            [
+              "1",
+              "Yr",
+              "2023"
+            ],
+            [
+              "2",
+              "Qty",
+              "12"
+            ],
+            [
+              "2",
+              "Yr",
+              "2024"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "unpivot skips nulls",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "k",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "col",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "v",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a",
+              "10"
+            ],
+            [
+              "1",
+              "c",
+              "30"
+            ],
+            [
+              "2",
+              "c",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sequences",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "100"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "110"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "120"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sequence as default and in insert",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Title",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "130",
+              "first"
+            ],
+            [
+              "140",
+              "second"
+            ],
+            [
+              "150",
+              "third"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sequence restart cycle and limits",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "254"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "b",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "255"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "c",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "d",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "7"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "e",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "f",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sequence exhausted",
+      "Error": 11728,
+      "ErrorMessage": "The sequence object 'Tiny' has reached its minimum or maximum value. Restart the sequence object to allow new values to be generated.",
+      "Results": []
+    },
+    {
+      "Name": "default sequence type and start",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "-9223372036854775808"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "gone",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "after triggers with inserted and deleted",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Sku",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Action",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "OldQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "NewQty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "b",
+              "D",
+              "20",
+              null
+            ],
+            [
+              "a",
+              "I",
+              null,
+              "1"
+            ],
+            [
+              "b",
+              "I",
+              null,
+              "2"
+            ],
+            [
+              "c",
+              "I",
+              null,
+              "3"
+            ],
+            [
+              "a",
+              "U",
+              "1",
+              "10"
+            ],
+            [
+              "b",
+              "U",
+              "2",
+              "20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "trigger fires once per statement even for zero rows",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "trigger can reject changes",
+      "Error": 50000,
+      "ErrorMessage": "Negative stock is not allowed\r\nThe transaction ended in the trigger. The batch has been aborted.",
+      "Results": []
+    },
+    {
+      "Name": "rejected change left no trace",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Sku",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "a",
+              "10"
+            ],
+            [
+              "c",
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "logged",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "trigger with update function and multi action",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Msg",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "qty updated"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "disable enable drop trigger",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "loggedWhileDisabled",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "loggedWhenEnabled",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "loggedAfterDrop",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "instead of trigger",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Deleted",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "ann",
+              "True"
+            ],
+            [
+              "2",
+              "bob",
+              "False"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "nested triggers cascade across tables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "11",
+              "13",
+              "15"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "trigger sees rowcount and merge fires triggers",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Kind",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Cnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "delete",
+              "2"
+            ],
+            [
+              "insert",
+              "1"
+            ],
+            [
+              "insert",
+              "3"
+            ],
+            [
+              "update",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "for json path",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "JSON_F52E2B61-18A1-11d1-B105-00805F49916B",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "[{\"Id\":1,\"Region\":\"North\",\"Amount\":100.00},{\"Id\":2,\"Region\":\"North\",\"Amount\":130.00}]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "for json nested paths nulls and root",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "JSON_F52E2B61-18A1-11d1-B105-00805F49916B",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "{\"sales\":[{\"id\":1,\"loc\":{\"region\":\"North\",\"product\":\"apple\"},\"missing\":null,\"flag\":true,\"d\":\"2024-03-05\",\"dt\":\"2024-03-05T10:20:30.123\",\"txt\":\"quote\\\" and \\\\ slash\"}]}"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "for json without array wrapper and auto",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "JSON_F52E2B61-18A1-11d1-B105-00805F49916B",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "{\"Id\":3,\"Product\":\"pear\"}"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "JSON_F52E2B61-18A1-11d1-B105-00805F49916B",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "[{\"Id\":4,\"Qty\":7},{\"Id\":5,\"Qty\":9}]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "for json empty result",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "JSON_F52E2B61-18A1-11d1-B105-00805F49916B",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": []
+        }
+      ]
+    },
+    {
+      "Name": "for json as nested subquery",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "JSON_F52E2B61-18A1-11d1-B105-00805F49916B",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "[{\"Region\":\"East\",\"items\":[{\"Product\":\"plum\",\"Qty\":4}]},{\"Region\":\"South\",\"items\":[{\"Product\":\"apple\",\"Qty\":7},{\"Product\":\"pear\",\"Qty\":9},{\"Product\":\"plum\",\"Qty\":2}]}]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "for json into variable",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "j",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "ok",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "q",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "[{\"Id\":1,\"Qty\":10},{\"Id\":2,\"Qty\":12}]",
+              "1",
+              "12"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "json_value json_query isjson",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "age",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "tag",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "city",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "zip",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "nope",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "obj",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "ok",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "tags",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "addr",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "notObj",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "valid",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "invalid",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "30",
+              "b",
+              "Oslo",
+              null,
+              null,
+              null,
+              "true",
+              "[\"a\",\"b\"]",
+              "{\"city\":\"Oslo\",\"zip\":null}",
+              null,
+              "1",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "openjson default schema",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "key",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "value",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "type",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "a",
+              "1",
+              "2"
+            ],
+            [
+              "b",
+              "two",
+              "1"
+            ],
+            [
+              "c",
+              "[1,2]",
+              "4"
+            ],
+            [
+              "d",
+              "{\"x\":1}",
+              "5"
+            ],
+            [
+              "e",
+              null,
+              "0"
+            ],
+            [
+              "f",
+              "true",
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "key",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "value",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "type",
+              "ClrType": "Byte",
+              "SqlType": "tinyint"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              "10",
+              "2"
+            ],
+            [
+              "1",
+              "x",
+              "1"
+            ],
+            [
+              "2",
+              null,
+              "0"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "value",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "2"
+            ],
+            [
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "openjson with schema",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "age",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "tags",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "Ann",
+              "30",
+              "[\"x\",\"y\"]"
+            ],
+            [
+              "2",
+              "Bob",
+              null,
+              null
+            ],
+            [
+              "3",
+              null,
+              null,
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "openjson to feed in list",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Product",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "apple"
+            ],
+            [
+              "3",
+              "pear"
+            ],
+            [
+              "5",
+              "pear"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "3"
+            ],
+            [
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "dbcc checkident",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "2"
+            ],
+            [
+              "101",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "no-op maintenance statements",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "7"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,772 @@
+{
+  "SourceHash": "DE42872DAC66629B",
+  "Cases": [
+    {
+      "Name": "alias types",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Mail",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Owed",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "m",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "a@x",
+              "1.24",
+              "b@x",
+              "2.56"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "COLUMN_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "IS_NULLABLE",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Id",
+              "NO"
+            ],
+            [
+              "Mail",
+              "NO"
+            ],
+            [
+              "Owed",
+              "YES"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "alias type not null is enforced",
+      "Error": 515,
+      "ErrorMessage": "Cannot insert the value NULL into column 'Mail', table 'LocalDbSharpConf_0b70c8b31509426bb4c288db91097ee0.dbo.Contact'; column does not allow nulls. INSERT fails.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "unknown type",
+      "Error": 2715,
+      "ErrorMessage": "Column, parameter, or variable #1: Cannot find data type dbo.NoSuchType.\r\nParameter or variable '@x' has an invalid data type.",
+      "Results": []
+    },
+    {
+      "Name": "duplicate type",
+      "Error": 219,
+      "ErrorMessage": "The type 'dbo.Email' already exists, or you do not have permission to create it.",
+      "Results": []
+    },
+    {
+      "Name": "table types and table valued parameters",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mx",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "c"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mx",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "c"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "mx",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "0",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "total",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "2"
+            ],
+            [
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "table type constraints apply",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK__#A12C0FD__3214EC0753A98C24'. Cannot insert duplicate key in object 'dbo.@list'. The duplicate key value is (1).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "drop type",
+      "Error": 218,
+      "ErrorMessage": "Could not find the type 'Amount2'. Either it does not exist or you do not have the necessary permission.",
+      "Results": []
+    },
+    {
+      "Name": "rowversion columns",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "increasing",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "bumpedOnUpdate",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "untouched",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "len",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "dbts",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "8",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "staleUpdateRows",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "rowversion cannot be written",
+      "Error": 273,
+      "ErrorMessage": "Cannot insert an explicit value into a timestamp column. Use INSERT with a column list to exclude the timestamp column, or insert a DEFAULT into the timestamp column.",
+      "Results": []
+    },
+    {
+      "Name": "rowversion cannot be updated",
+      "Error": 272,
+      "ErrorMessage": "Cannot update a timestamp column.",
+      "Results": []
+    },
+    {
+      "Name": "rowversion with default keyword and timestamp synonym",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "len",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "8"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sp_rename",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "gone",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "sp_rename missing object",
+      "Error": 15225,
+      "ErrorMessage": "No item by the name of 'NoSuchThing' could be found in the current database 'LocalDbSharpConf_0b70c8b31509426bb4c288db91097ee0', given that @itemtype was input as '(null)'.",
+      "Results": []
+    },
+    {
+      "Name": "session context",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "tenant",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "usr",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "missing",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "42",
+              "ann",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "extended properties are accepted",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "ok",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "constraint catalog views",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "CONSTRAINT_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "TABLE_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "CONSTRAINT_TYPE",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "CK_Chi_Qty",
+              "Chi",
+              "CHECK"
+            ],
+            [
+              "FK_Chi_Par",
+              "Chi",
+              "FOREIGN KEY"
+            ],
+            [
+              "PK_Chi",
+              "Chi",
+              "PRIMARY KEY"
+            ],
+            [
+              "PK_Par",
+              "Par",
+              "PRIMARY KEY"
+            ],
+            [
+              "UQ_Par_Code",
+              "Par",
+              "UNIQUE"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "CONSTRAINT_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "TABLE_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "COLUMN_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "ORDINAL_POSITION",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "FK_Chi_Par",
+              "Chi",
+              "ParId",
+              "1"
+            ],
+            [
+              "PK_Chi",
+              "Chi",
+              "Id",
+              "1"
+            ],
+            [
+              "PK_Par",
+              "Par",
+              "Id",
+              "1"
+            ],
+            [
+              "UQ_Par_Code",
+              "Par",
+              "Code",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "CONSTRAINT_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "UNIQUE_CONSTRAINT_NAME",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "UPDATE_RULE",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "DELETE_RULE",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "FK_Chi_Par",
+              "PK_Par",
+              "NO ACTION",
+              "CASCADE"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "type",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "tbl",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "PK_Chi",
+              "PK",
+              "Chi"
+            ],
+            [
+              "PK_Par",
+              "PK",
+              "Par"
+            ],
+            [
+              "UQ_Par_Code",
+              "UQ",
+              "Par"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "child",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "parent",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "FK_Chi_Par",
+              "Chi",
+              "Par"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "child",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "parent_column_id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "parent",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "referenced_column_id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Chi",
+              "2",
+              "Par",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "tbl",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "CK_Chi_Qty",
+              "Chi"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "parent_column_id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "DF_Chi_Qty",
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "column_id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "seed",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "incr",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "Id",
+              "1",
+              "5",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "metadata functions",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int16",
+              "SqlType": "smallint"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int16",
+              "SqlType": "smallint"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int16",
+              "SqlType": "smallint"
+            },
+            {
+              "Name": "d",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "e",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "f",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "g",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "h",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "i",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "4",
+              null,
+              "Code",
+              "1",
+              "1",
+              "0",
+              "1",
+              "4"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

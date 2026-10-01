@@ -1,0 +1,1627 @@
+{
+  "SourceHash": "F2B78A46D3C5318F",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "select all",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "Hired",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "Active",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "Code",
+              "ClrType": "String",
+              "SqlType": "char"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "Ann",
+              "10",
+              "3000.00",
+              "2019-03-01 00:00:00.0000000",
+              "True",
+              "A1 "
+            ],
+            [
+              "2",
+              "Bob",
+              "10",
+              "2500.50",
+              "2020-06-15 00:00:00.0000000",
+              "True",
+              "B2 "
+            ],
+            [
+              "3",
+              "Cid",
+              "20",
+              "5000.00",
+              "2018-01-20 00:00:00.0000000",
+              "True",
+              null
+            ],
+            [
+              "4",
+              "Dee",
+              "20",
+              "4200.00",
+              "2021-11-05 00:00:00.0000000",
+              "True",
+              "D4 "
+            ],
+            [
+              "5",
+              "Eve",
+              null,
+              "1500.00",
+              "2022-02-02 00:00:00.0000000",
+              "True",
+              "E5 "
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "column types and char padding",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "Hired",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "Active",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "Code",
+              "ClrType": "String",
+              "SqlType": "char"
+            },
+            {
+              "Name": "codeLen",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "padded",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "Ann",
+              "3000.00",
+              "2019-03-01 00:00:00.0000000",
+              "True",
+              "A1 ",
+              "3",
+              "A1 |"
+            ],
+            [
+              "Bob",
+              "2500.50",
+              "2020-06-15 00:00:00.0000000",
+              "True",
+              "B2 ",
+              "3",
+              "B2 |"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "insert with defaults and scope_identity",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "id2",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6",
+              "6",
+              "1"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "Hired",
+              "ClrType": "DateTime",
+              "SqlType": "date"
+            },
+            {
+              "Name": "Active",
+              "ClrType": "Boolean",
+              "SqlType": "bit"
+            },
+            {
+              "Name": "Code",
+              "ClrType": "String",
+              "SqlType": "char"
+            }
+          ],
+          "Rows": [
+            [
+              "6",
+              "Fay",
+              null,
+              "1000.00",
+              "2020-01-01 00:00:00.0000000",
+              "True",
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "insert default keyword and default values",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "A",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "B",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "C",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              "7",
+              "x",
+              null
+            ],
+            [
+              "10",
+              "7",
+              "y",
+              null
+            ],
+            [
+              "15",
+              "1",
+              "x",
+              null
+            ],
+            [
+              "20",
+              "2",
+              "z",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "insert select",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "ANN"
+            ],
+            [
+              "2",
+              "BOB"
+            ],
+            [
+              "103",
+              "Cid"
+            ],
+            [
+              "104",
+              "Dee"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "update simple",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "Code",
+              "ClrType": "String",
+              "SqlType": "char"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "3300.00",
+              "ZZ "
+            ],
+            [
+              "2",
+              "2750.55",
+              "ZZ "
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "update with compound operators",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "Cid!",
+              "10100.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "update uses old values on the right side",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "a",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "b",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "1"
+            ],
+            [
+              "4",
+              "3"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "update from join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Salary",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "10125.00"
+            ],
+            [
+              "4",
+              "4225.00"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "update with subquery and top",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "DeptId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Budget",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "10",
+              "6050.55"
+            ],
+            [
+              "20",
+              "25000.00"
+            ],
+            [
+              "30",
+              null
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "update variable assignment",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "lastOk",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6050.55",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "delete",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "delete from join",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ],
+            [
+              "2"
+            ],
+            [
+              "5"
+            ],
+            [
+              "6"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "n",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "truncate resets identity",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "4",
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "5"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "identity_insert",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "5"
+            ],
+            [
+              "50",
+              "6"
+            ],
+            [
+              "51",
+              "7"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "cur",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "51"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "explicit identity without identity_insert",
+      "Error": 544,
+      "ErrorMessage": "Cannot insert explicit value for identity column in table 'T3' when IDENTITY_INSERT is set to OFF.",
+      "Results": []
+    },
+    {
+      "Name": "primary key violation",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK__Dept__014881AE2E33ADB0'. Cannot insert duplicate key in object 'dbo.Dept'. The duplicate key value is (10).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "unique violation",
+      "Error": 2627,
+      "ErrorMessage": "Violation of UNIQUE KEY constraint 'UQ__Dept__737584F69503EEFE'. Cannot insert duplicate key in object 'dbo.Dept'. The duplicate key value is (sales).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "not null violation",
+      "Error": 515,
+      "ErrorMessage": "Cannot insert the value NULL into column 'Name', table 'LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729.dbo.Dept'; column does not allow nulls. INSERT fails.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "check violation",
+      "Error": 547,
+      "ErrorMessage": "The INSERT statement conflicted with the CHECK constraint \"CK_Emp_Salary\". The conflict occurred in database \"LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729\", table \"dbo.Emp\", column 'Salary'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "foreign key violation on insert",
+      "Error": 547,
+      "ErrorMessage": "The INSERT statement conflicted with the FOREIGN KEY constraint \"FK__Emp__DeptId__4D94879B\". The conflict occurred in database \"LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729\", table \"dbo.Dept\", column 'DeptId'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "foreign key violation on delete",
+      "Error": 547,
+      "ErrorMessage": "The DELETE statement conflicted with the REFERENCE constraint \"FK__Emp__DeptId__4D94879B\". The conflict occurred in database \"LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729\", table \"dbo.Emp\", column 'DeptId'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "foreign key violation on update",
+      "Error": 547,
+      "ErrorMessage": "The UPDATE statement conflicted with the FOREIGN KEY constraint \"FK__Emp__DeptId__4D94879B\". The conflict occurred in database \"LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729\", table \"dbo.Dept\", column 'DeptId'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "string truncation",
+      "Error": 2628,
+      "ErrorMessage": "String or binary data would be truncated in table 'LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729.dbo.Dept', column 'Name'. Truncated value: 'This department name is far to'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "failed statements left no rows behind",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "depts",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "emps",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "multi row insert is atomic",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK__Dept__014881AE2E33ADB0'. Cannot insert duplicate key in object 'dbo.Dept'. The duplicate key value is (10).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "statement error does not stop the batch",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK__Dept__014881AE2E33ADB0'. Cannot insert duplicate key in object 'dbo.Dept'. The duplicate key value is (10).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "column count mismatch",
+      "Error": 213,
+      "ErrorMessage": "Column name or number of supplied values does not match table definition.",
+      "Results": []
+    },
+    {
+      "Name": "invalid column in insert",
+      "Error": 207,
+      "ErrorMessage": "Invalid column name 'Nope'.",
+      "Results": []
+    },
+    {
+      "Name": "invalid table",
+      "Error": 208,
+      "ErrorMessage": "Invalid object name 'NoSuchTable'.",
+      "Results": []
+    },
+    {
+      "Name": "invalid column",
+      "Error": 207,
+      "ErrorMessage": "Invalid column name 'Nope'.",
+      "Results": []
+    },
+    {
+      "Name": "ambiguous column",
+      "Error": 209,
+      "ErrorMessage": "Ambiguous column name 'DeptId'.",
+      "Results": []
+    },
+    {
+      "Name": "cascade delete and set null",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Pid",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Pid",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              null
+            ],
+            [
+              "2",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "composite keys",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK_CK'. Cannot insert duplicate key in object 'dbo.CK'. The duplicate key value is (1, X).",
+      "Results": []
+    },
+    {
+      "Name": "computed columns",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Price",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "Total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "Label",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "9.99",
+              "19.98",
+              "#2"
+            ],
+            [
+              "10",
+              "1.50",
+              "15.00",
+              "#10"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "alter table add and drop column",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "D",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "E",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "5",
+              null,
+              "def"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "A",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "B",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "D",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "E",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "9",
+              "a longer value than ten",
+              "1",
+              "def"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "alter table add constraint",
+      "Error": 1505,
+      "ErrorMessage": "The CREATE UNIQUE INDEX statement terminated because a duplicate key was found for the object name 'dbo.T1' and the index name 'UQ_T1_B'. The duplicate key value is (x).\r\nCould not create constraint or index. See previous errors.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "drop constraint then insert",
+      "Error": 3728,
+      "ErrorMessage": "'UQ_T1_B' is not a constraint.\r\nCould not drop constraint. See previous errors.",
+      "Results": []
+    },
+    {
+      "Name": "unique index",
+      "Error": 2601,
+      "ErrorMessage": "Cannot insert duplicate key row in object 'dbo.T2' with unique index 'IX_T2_Id'. The duplicate key value is (1000).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "scans return rows in clustered key order",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a"
+            ],
+            [
+              "2",
+              "b"
+            ],
+            [
+              "3",
+              "c"
+            ],
+            [
+              "4",
+              "d"
+            ],
+            [
+              "5",
+              "e"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ],
+            [
+              "4"
+            ],
+            [
+              "5"
+            ],
+            [
+              "10"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ],
+            [
+              "4"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Code",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "N",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "a",
+              "1"
+            ],
+            [
+              "a",
+              "9"
+            ],
+            [
+              "B",
+              "1"
+            ],
+            [
+              "b",
+              "2"
+            ],
+            [
+              "c",
+              "0"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "V",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "1"
+            ],
+            [
+              "1",
+              "2"
+            ],
+            [
+              "2",
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3"
+            ],
+            [
+              "1"
+            ],
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ],
+            [
+              "1"
+            ],
+            [
+              "3"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "A",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "B",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2",
+              "1"
+            ],
+            [
+              "2",
+              "2"
+            ],
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "2"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "identity values follow the order of the source scan",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "K",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "10"
+            ],
+            [
+              "2",
+              "20"
+            ],
+            [
+              "3",
+              "30"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "key violations are reported before check violations",
+      "Error": 2627,
+      "ErrorMessage": "Violation of PRIMARY KEY constraint 'PK__Prec__3214EC0796854A20'. Cannot insert duplicate key in object 'dbo.Prec'. The duplicate key value is (1).\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "check violations are reported when the key is fine",
+      "Error": 547,
+      "ErrorMessage": "The INSERT statement conflicted with the CHECK constraint \"CK__Prec__Q__73BA3083\". The conflict occurred in database \"LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729\", table \"dbo.Prec\", column 'Q'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "null violations are reported first",
+      "Error": 515,
+      "ErrorMessage": "Cannot insert the value NULL into column 'Q', table 'LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729.dbo.Prec'; column does not allow nulls. INSERT fails.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "insert reports the first problem in column order",
+      "Error": 8115,
+      "ErrorMessage": "Arithmetic overflow error converting int to data type numeric.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "insert null before later truncation",
+      "Error": 515,
+      "ErrorMessage": "Cannot insert the value NULL into column 'b', table 'LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729.dbo.Prec2'; column does not allow nulls. INSERT fails.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "insert null before later conversion error",
+      "Error": 515,
+      "ErrorMessage": "Cannot insert the value NULL into column 'b', table 'LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729.dbo.Prec2'; column does not allow nulls. INSERT fails.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "insert overflow before later truncation",
+      "Error": 8115,
+      "ErrorMessage": "Arithmetic overflow error converting int to data type numeric.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "update converts every column before checking nulls",
+      "Error": 2628,
+      "ErrorMessage": "String or binary data would be truncated in table 'LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729.dbo.Prec2', column 'c'. Truncated value: 'too'.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "update overflow before null",
+      "Error": 8115,
+      "ErrorMessage": "Arithmetic overflow error converting int to data type numeric.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "update null",
+      "Error": 515,
+      "ErrorMessage": "Cannot insert the value NULL into column 'b', table 'LocalDbSharpConf_b122643f7f794581856b1f96bfc2a729.dbo.Prec2'; column does not allow nulls. UPDATE fails.\r\nThe statement has been terminated.",
+      "Results": []
+    },
+    {
+      "Name": "drop table if exists",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              null
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "drop missing table",
+      "Error": 3701,
+      "ErrorMessage": "Cannot drop the table 'NoSuchTable', because it does not exist or you do not have permission.",
+      "Results": []
+    },
+    {
+      "Name": "create existing table",
+      "Error": 2714,
+      "ErrorMessage": "There is already an object named 'Dept' in the database.",
+      "Results": []
+    },
+    {
+      "Name": "select into",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rc",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "2"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "EmpId",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "nvarchar"
+            },
+            {
+              "Name": "Dbl",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "Ann",
+              "6600.00"
+            ],
+            [
+              "2",
+              "Bob",
+              "5501.10"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "temp tables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "v1",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "v2",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "b",
+              "b"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "present",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "table variables",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Qty",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a",
+              "1"
+            ],
+            [
+              "3",
+              "c",
+              "6"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "schemas",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "one"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Name",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "one"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "bracketed and quoted identifiers",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "my col",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "select",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "quoted",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "the sum",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "x",
+              "2",
+              "3"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1144 @@
+{
+  "SourceHash": "89071E564081EF2F",
+  "Cases": [
+    {
+      "Name": "(setup)",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": []
+    },
+    {
+      "Name": "row_number rank dense_rank",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "rn",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "rk",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "dr",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "4",
+              "4",
+              "3"
+            ],
+            [
+              "2",
+              "1",
+              "1",
+              "1"
+            ],
+            [
+              "3",
+              "2",
+              "1",
+              "1"
+            ],
+            [
+              "4",
+              "6",
+              "6",
+              "5"
+            ],
+            [
+              "5",
+              "7",
+              "7",
+              "6"
+            ],
+            [
+              "6",
+              "3",
+              "3",
+              "2"
+            ],
+            [
+              "7",
+              "5",
+              "5",
+              "4"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "partitioned ranking",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Grp",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "rn",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "rk",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "a",
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "a",
+              "2",
+              "2"
+            ],
+            [
+              "3",
+              "a",
+              "3",
+              "2"
+            ],
+            [
+              "4",
+              "b",
+              "2",
+              "2"
+            ],
+            [
+              "5",
+              "b",
+              "1",
+              "1"
+            ],
+            [
+              "6",
+              "b",
+              "3",
+              "3"
+            ],
+            [
+              "7",
+              "c",
+              "1",
+              "1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "ntile",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "t3",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "t2",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "t10",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            [
+              "2",
+              "1",
+              "1",
+              "2"
+            ],
+            [
+              "3",
+              "1",
+              "2",
+              "3"
+            ],
+            [
+              "4",
+              "2",
+              "1",
+              "4"
+            ],
+            [
+              "5",
+              "2",
+              "1",
+              "5"
+            ],
+            [
+              "6",
+              "3",
+              "2",
+              "6"
+            ],
+            [
+              "7",
+              "3",
+              "1",
+              "7"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "lag lead",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "prev",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "nxt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "prev2",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "nextInGrp",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              null,
+              "20",
+              "-1",
+              "2"
+            ],
+            [
+              "2",
+              "10",
+              "20",
+              "-1",
+              "3"
+            ],
+            [
+              "3",
+              "20",
+              "5",
+              "10",
+              "0"
+            ],
+            [
+              "4",
+              "20",
+              null,
+              "20",
+              "5"
+            ],
+            [
+              "5",
+              "5",
+              "15",
+              "20",
+              "6"
+            ],
+            [
+              "6",
+              null,
+              "7",
+              "5",
+              "0"
+            ],
+            [
+              "7",
+              "15",
+              null,
+              null,
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "first_value last_value",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "fv",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "lvDefault",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "lvFull",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "3"
+            ],
+            [
+              "2",
+              "1",
+              "2",
+              "3"
+            ],
+            [
+              "3",
+              "1",
+              "3",
+              "3"
+            ],
+            [
+              "4",
+              "4",
+              "4",
+              "6"
+            ],
+            [
+              "5",
+              "4",
+              "5",
+              "6"
+            ],
+            [
+              "6",
+              "4",
+              "6",
+              "6"
+            ],
+            [
+              "7",
+              "7",
+              "7",
+              "7"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "aggregate over whole partition",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "grpTotal",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "grpCnt",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "nonNull",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "grpAvg",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "grpMax",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "67.25",
+              "7.00",
+              "3",
+              "6",
+              "16",
+              "20"
+            ],
+            [
+              "2",
+              "67.25",
+              "7.00",
+              "3",
+              "6",
+              "16",
+              "20"
+            ],
+            [
+              "3",
+              "67.25",
+              "7.00",
+              "3",
+              "6",
+              "16",
+              "20"
+            ],
+            [
+              "4",
+              "67.25",
+              "60.00",
+              "3",
+              "6",
+              "10",
+              "15"
+            ],
+            [
+              "5",
+              "67.25",
+              "60.00",
+              "3",
+              "6",
+              "10",
+              "15"
+            ],
+            [
+              "6",
+              "67.25",
+              "60.00",
+              "3",
+              "6",
+              "10",
+              "15"
+            ],
+            [
+              "7",
+              "67.25",
+              "0.25",
+              "1",
+              "6",
+              "7",
+              "7"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "running totals with default range frame",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "running",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "runByVal",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "cntByVal",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "grpRunning",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1.50",
+              "22",
+              "4",
+              "1.50"
+            ],
+            [
+              "2",
+              "4.00",
+              "77",
+              "7",
+              "4.00"
+            ],
+            [
+              "3",
+              "7.00",
+              "77",
+              "7",
+              "7.00"
+            ],
+            [
+              "4",
+              "17.00",
+              "5",
+              "2",
+              "10.00"
+            ],
+            [
+              "5",
+              "37.00",
+              null,
+              "1",
+              "30.00"
+            ],
+            [
+              "6",
+              "67.00",
+              "37",
+              "5",
+              "60.00"
+            ],
+            [
+              "7",
+              "67.25",
+              "12",
+              "3",
+              "0.25"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "explicit rows frames",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "s2",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "s3",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "avg3",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "minRest",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "running",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "ahead",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "10",
+              "30",
+              "1.500000",
+              "5",
+              "10",
+              "2"
+            ],
+            [
+              "2",
+              "30",
+              "50",
+              "2.000000",
+              "5",
+              "30",
+              "2"
+            ],
+            [
+              "3",
+              "40",
+              "45",
+              "2.333333",
+              "5",
+              "50",
+              "2"
+            ],
+            [
+              "4",
+              "25",
+              "25",
+              "5.166666",
+              "5",
+              "55",
+              "2"
+            ],
+            [
+              "5",
+              "5",
+              "20",
+              "11.000000",
+              "7",
+              "55",
+              "1"
+            ],
+            [
+              "6",
+              "15",
+              "22",
+              "20.000000",
+              "7",
+              "70",
+              "0"
+            ],
+            [
+              "7",
+              "22",
+              "22",
+              "16.750000",
+              "7",
+              "77",
+              "0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "range frame with peers",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Val",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "r1",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "r2",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "10",
+              "22",
+              "65"
+            ],
+            [
+              "2",
+              "20",
+              "77",
+              "40"
+            ],
+            [
+              "3",
+              "20",
+              "77",
+              "40"
+            ],
+            [
+              "4",
+              "5",
+              "5",
+              "77"
+            ],
+            [
+              "5",
+              null,
+              null,
+              "77"
+            ],
+            [
+              "6",
+              "15",
+              "37",
+              "55"
+            ],
+            [
+              "7",
+              "7",
+              "12",
+              "72"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "percent_rank cume_dist",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "pr",
+              "ClrType": "Double",
+              "SqlType": "float"
+            },
+            {
+              "Name": "cd",
+              "ClrType": "Double",
+              "SqlType": "float"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "0.5",
+              "0.5714285714285714"
+            ],
+            [
+              "2",
+              "0.8333333333333334",
+              "1"
+            ],
+            [
+              "3",
+              "0.8333333333333334",
+              "1"
+            ],
+            [
+              "4",
+              "0.16666666666666666",
+              "0.2857142857142857"
+            ],
+            [
+              "5",
+              "0",
+              "0.14285714285714285"
+            ],
+            [
+              "6",
+              "0.6666666666666666",
+              "0.7142857142857143"
+            ],
+            [
+              "7",
+              "0.3333333333333333",
+              "0.42857142857142855"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "window over grouped query",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Grp",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "total",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "rk",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "grand",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "pct",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "a",
+              "7.00",
+              "2",
+              "67.25",
+              "10.408921"
+            ],
+            [
+              "b",
+              "60.00",
+              "1",
+              "67.25",
+              "89.219330"
+            ],
+            [
+              "c",
+              "0.25",
+              "3",
+              "67.25",
+              "0.371747"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "window function in order by and in expression",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "6"
+            ],
+            [
+              "5"
+            ],
+            [
+              "4"
+            ],
+            [
+              "3"
+            ],
+            [
+              "2"
+            ],
+            [
+              "1"
+            ],
+            [
+              "7"
+            ]
+          ]
+        },
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "diff",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "tag",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "-0.833333",
+              "first"
+            ],
+            [
+              "2",
+              "0.166667",
+              ""
+            ],
+            [
+              "3",
+              "0.666667",
+              ""
+            ],
+            [
+              "4",
+              "-10.000000",
+              "first"
+            ],
+            [
+              "5",
+              "0.000000",
+              ""
+            ],
+            [
+              "6",
+              "10.000000",
+              ""
+            ],
+            [
+              "7",
+              "0.000000",
+              "first"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "top n per group via cte",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Grp",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            },
+            {
+              "Name": "Amt",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "a",
+              "3.00"
+            ],
+            [
+              "6",
+              "b",
+              "30.00"
+            ],
+            [
+              "7",
+              "c",
+              "0.25"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "dedupe via row_number",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "Id",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "Val",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            }
+          ],
+          "Rows": [
+            [
+              "3",
+              "20"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "window result types",
+      "Error": null,
+      "ErrorMessage": null,
+      "Results": [
+        {
+          "Columns": [
+            {
+              "Name": "rn",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "rk",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "nt",
+              "ClrType": "Int64",
+              "SqlType": "bigint"
+            },
+            {
+              "Name": "s",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "a",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "c",
+              "ClrType": "Int32",
+              "SqlType": "int"
+            },
+            {
+              "Name": "l",
+              "ClrType": "Decimal",
+              "SqlType": "decimal"
+            },
+            {
+              "Name": "m",
+              "ClrType": "String",
+              "SqlType": "varchar"
+            }
+          ],
+          "Rows": [
+            [
+              "1",
+              "1",
+              "1",
+              "77",
+              "9.607142",
+              "7",
+              null,
+              "a"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "window function not allowed in where",
+      "Error": 4108,
+      "ErrorMessage": "Windowed functions can only appear in the SELECT or ORDER BY clauses.",
+      "Results": []
+    },
+    {
+      "Name": "ranking requires order by",
+      "Error": 4112,
+      "ErrorMessage": "The function 'ROW_NUMBER' must have an OVER clause with ORDER BY.",
+      "Results": []
+    }
+  ]
+}
